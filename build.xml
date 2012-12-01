@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="atom" default="build">
+    <target name="build" depends="phpab" />
+
+    <target name="phpab" description="Generate autoloader scripts">
+        <exec executable="phpab">
+            <arg value="--output" />
+            <arg path="${basedir}/app/autoload.php" />
+            <arg path="${basedir}/app" />
+        </exec>
+
+        <exec executable="phpab">
+            <arg value="--output" />
+            <arg path="${basedir}/tests/autoload.php" />
+            <arg path="${basedir}/tests" />
+        </exec>
+    </target>
+</project>
+

@@ -1,8 +1,7 @@
-<<<<<<< HEAD
-/app/nbproject/private/
-=======
+/.kdev4/
+/nbproject/
+/config/parameters*.xml
 *.kdev4
 *.swp
+*~
 
-config/parameters.xml.dist
->>>>>>> 14144c852b62f07f3b2e1e48ff315d16b2663617
