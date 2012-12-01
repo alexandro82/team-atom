@@ -2,13 +2,13 @@ SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
-USE `mydb` ;
+CREATE SCHEMA IF NOT EXISTS `atom` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ;
+USE `atom` ;
 
 -- -----------------------------------------------------
--- Table `mydb`.`municipio`
+-- Table `atom`.`municipio`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `mydb`.`municipio` (
+CREATE  TABLE IF NOT EXISTS `atom`.`municipio` (
   `id` INT NOT NULL AUTO_INCREMENT ,
   `municipio_nombre` VARCHAR(45) NULL ,
   `municipio_departamento` VARCHAR(45) NULL ,
@@ -22,9 +22,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`indicador`
+-- Table `atom`.`indicador`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `mydb`.`indicador` (
+CREATE  TABLE IF NOT EXISTS `atom`.`indicador` (
   `id` INT NOT NULL ,
   `indicador_descripcion` VARCHAR(45) NULL ,
   `indicador_tipo` VARCHAR(45) NULL ,
@@ -34,9 +34,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`indice`
+-- Table `atom`.`indice`
 -- -----------------------------------------------------
-CREATE  TABLE IF NOT EXISTS `mydb`.`indice` (
+CREATE  TABLE IF NOT EXISTS `atom`.`indice` (
   `id` INT NOT NULL ,
   `indice_gestion` VARCHAR(45) NULL ,
   `indice_valor` VARCHAR(45) NULL ,
@@ -48,12 +48,12 @@ CREATE  TABLE IF NOT EXISTS `mydb`.`indice` (
   INDEX `fk_indice_indicador1_idx` (`indicador_id` ASC) ,
   CONSTRAINT `fk_indice_municipio`
     FOREIGN KEY (`municipio_id` )
-    REFERENCES `mydb`.`municipio` (`id` )
+    REFERENCES `atom`.`municipio` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_indice_indicador1`
     FOREIGN KEY (`indicador_id` )
-    REFERENCES `mydb`.`indicador` (`id` )
+    REFERENCES `atom`.`indicador` (`id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
