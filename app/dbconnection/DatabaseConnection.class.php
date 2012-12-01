@@ -1,6 +1,7 @@
 <?php
 namespace atom\database;
 
+
 /**
  * DatabaseConnection
  *
@@ -92,6 +93,16 @@ class DatabaseConnection
             throw $e;
         }
         return $this->pdo;
+    }
+
+    /**
+     * Close database connection
+     */
+    public function closeConnection()
+    {
+        if ($this->connection !== null) {
+            $this->connection->close();
+        }
     }
 
     private function cleanData($data)
