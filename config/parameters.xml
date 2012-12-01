@@ -4,6 +4,6 @@
         <username>root</username>
         <password>mysql</password>
         <dbhost>localhost</dbhost>
-        <dbname>mydb</dbname>
+        <dbname>atom</dbname>
     </database>
 </databases>
