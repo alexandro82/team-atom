@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databases>
+    <database>
+        <username>root</username>
+        <password>mysql</password>
+        <dbhost>localhost</dbhost>
+        <dbname>mydb</dbname>
+    </database>
+</databases>
