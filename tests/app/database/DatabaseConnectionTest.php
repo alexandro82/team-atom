@@ -13,7 +13,7 @@ class DatabaseConnectionTest extends Generic_Tests_DatabaseTestCase
 
     protected function getDataSet()
     {
-        return $this->createMySQLXMLDataSet($this->fixtures.'/Database/fixtures01.xml');
+        return $this->createMySQLXMLDataSet($this->fixtures.'/Database/empty-database.xml');
     }
 
     public function testEmptyDatabase()
