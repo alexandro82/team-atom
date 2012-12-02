@@ -104,7 +104,7 @@ include_once("./conectar.php");
             var popup = new OpenLayers.Popup.FramedCloud("chicken", 
                 feature.geometry.getBounds().getCenterLonLat(),
                 new OpenLayers.Size(80,80),
-                "<h3>"+feature.attributes.nombre + "</h3><p>"+feature.attributes.departamento+"</p><p>Categoría: "+feature.attributes.categoria+"</p>",
+                "<h3>"+feature.attributes.nombre + "</h3><p>"+feature.attributes.departamento+"</p>",
                 null, true, onPopupClose
             );
             feature.popup = popup;

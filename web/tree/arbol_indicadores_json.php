@@ -1,7 +1,7 @@
 <?php
-include_once("conectar.php");
+require_once __DIR__.'/../../app/autoload.php';
 
-
+use atom\database\DatabaseConnection;
 
 function busca_hijos($id,$nombre)
 {
@@ -76,8 +76,8 @@ $json.='"name": "Indices",';
 $json.='"children": [';
 
 
-$sql= new BDD;
-$sql->Connect();
+$sql= new DatabaseConnection;
+$sql->getConnection();
 
 $aux=0;
 
@@ -86,7 +86,7 @@ foreach (nodo_inicial() as $nodo) {
  $nodos_hijos=busca_hijos($nodo[0],$nodo[1]);
   $json.=$a.$nodos_hijos;
 };
-$sql->Disconnect(); 
+$sql->closeConnection(); 
 
 $json.=']';
 $json.='}';
