@@ -71,9 +71,9 @@ h4 {
             <?php include '../leftbar.php'; ?>
 
             <div class="span3">
-                <form  class="form" style="width:100%">
+                <form  id="consulta_indice" class="form" style="width:100%">
                     <label for="indicador_a">Indicador 1</label>
-                    <select name="indicador_a">
+                    <select name="indicador_a" id="indicador_a">
                         <?php foreach($indicadores as $i): ?>
                         <option value="<?php echo $i['id']; ?>">
                             <?php echo $i['indicador']; ?>
@@ -82,7 +82,7 @@ h4 {
                     </select>
                     
                     <label for="indicador_b">Indicador 2</label>
-                    <select name="indicador_b">
+                    <select name="indicador_b" id="indicador_b">
                         <?php foreach($indicadores as $i): ?>
                         <option value="<?php echo $i['id']; ?>">
                             <?php echo $i['indicador']; ?>
@@ -91,7 +91,7 @@ h4 {
                     </select>
 
                     <label for="gestion">Gesti&oacute;n:</label>
-                    <select name="gestion">
+                    <select name="gestion" id="gestion">
                         <?php foreach(range(2009, 2005) as $i): ?>
                         <option value="<?php echo $i; ?>">
                             <?php echo $i; ?>
@@ -173,8 +173,13 @@ h4 {
     <script type="text/javascript">
         
         $(document).ready(function() {
-            $("#submit").on('click', function(){
-                initDispersion();
+            $("#consulta_indice").on('click', function(event){
+                event.preventDefault();
+                var indicador_a = $(this).find('#indicador_a option:selected').val();
+                var indicador_b = $(this).find('#indicador_b option:selected').val();
+                var gestion = $(this).find('#gestion option:selected').val();
+                var municipio = $(this).find('#municipio option:selected').val();
+                canvas.graphics[0].setParameters(indicador_a, indicador_b, gestion, municipio);
             });
         });
         
