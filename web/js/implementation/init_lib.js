@@ -14,8 +14,8 @@ function init_lib() {
             municipality;
         canvas = new AppCanvas({
             id : "canvas",
-            width : 1200,
-            height : 1200,
+            width : '800',
+            height : '800',
             municipalities: data
         });
 

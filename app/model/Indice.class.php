@@ -116,6 +116,9 @@ class Indice extends DatabaseConnection
                 . ' i.indice_valor as valor, '
                 . ' i.municipio_id, '
                 . ' m.municipio_nombre as municipio, '
+                . ' m.municipio_longitud as longitud, '
+                . ' m.municipio_latitud as latitud, '
+                . ' m.municipio_departamento as departamento, '
                 . ' i.indicador_id, '
                 . ' ir.indicador_descripcion as indicador,'
                 . ' i.indice_estado '
@@ -128,6 +131,39 @@ class Indice extends DatabaseConnection
             $stmt = $pdo->prepare($query);
             $stmt->bindValue(':indicador_id', $indicador_id);
             $stmt->bindValue(':year', $year);
+            $stmt->execute();
+            $data = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        } catch (\Exception $e) {
+            $msg = "Error Indice::getIndiceByIndicadorAndYear:\n$e";
+            error_log($msg);
+        }
+        return $data;
+    }
+
+    /**
+     * Get Municipio By Indice
+     */
+    public function getIndiceByIndicador($indicador_id)
+    {
+        $data = array();
+        try {
+            $pdo = $this->getConnection();
+            $query = 'select i.id, '
+            . ' i.indice_gestion as gestion, '
+            . ' i.indice_valor as valor, '
+            . ' i.municipio_id, '
+            . ' m.municipio_nombre as municipio, '
+            . ' m.municipio_categoria as categoria, '
+            . ' i.indicador_id, '
+            . ' ir.indicador_descripcion as indicador,'
+            . ' i.indice_estado '
+            . ' from indice i '
+            . ' left join indicador ir on (ir.id = i.indicador_id) '
+            . ' left join municipio m on (m.id = i.municipio_id) '
+            . ' where i.indicador_id = :indicador_id '
+            . ' order by i.municipio_id ';
+            $stmt = $pdo->prepare($query);
+            $stmt->bindValue(':indicador_id', $indicador_id);
             $stmt->execute();
             $data = $stmt->fetchAll(\PDO::FETCH_ASSOC);
         } catch (\Exception $e) {
