@@ -98,7 +98,7 @@ DispersionGraphic.prototype.addPoint = function (xVar, yVar) {
         x = this.xAxis.getValPosition(xVar.value) * this.xAxis.factor + this.xAxis.x,
         y = this.yAxis.getValPosition(yVar.value) * this.yAxis.factor + this.yAxis.y;
 
-    console.log(x + " " + y);
+
     this.points.push(municipality);
     this.addElement(municipality, x, y);
     return this;
@@ -126,4 +126,8 @@ DispersionGraphic.prototype.paint = function () {
         this.points[i].paint();
     }
     return this;
+};
+
+DispersionGraphic.prototype.setToTendency = function (municipality) {
+    alert(municipality.code);
 };

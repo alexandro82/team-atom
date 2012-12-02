@@ -115,11 +115,13 @@ class Indice extends DatabaseConnection
                 . ' i.indice_gestion as gestion, '
                 . ' i.indice_valor as valor, '
                 . ' i.municipio_id, '
+                . ' m.municipio_nombre as municipio, '
                 . ' i.indicador_id, '
                 . ' ir.indicador_descripcion as indicador,'
                 . ' i.indice_estado '
                 . ' from indice i '
                 . ' left join indicador ir on (ir.id = i.indicador_id) '
+                . ' left join municipio m on (m.id = i.municipio_id) '
                 . ' where i.indicador_id = :indicador_id '
                 . ' and i.indice_gestion = :year '
                 . ' order by i.municipio_id ';

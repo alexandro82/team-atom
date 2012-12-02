@@ -25,6 +25,12 @@ h4 {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+.selectedMunicipality {
+    background-image: url(/js/implementation/img/municipio_verde.jpg);
+}
+.deselectedMunicipality {
+    background-image: url(/js/implementation/img/municipio_azul.jpg);
+}
 </style>
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -48,18 +54,18 @@ h4 {
         <div class="row-fluid">
             <?php include '../leftbar.php'; ?>
     
-            <div class="forms">
+            <div class="forms span9" >
                 <div id="canvas">
                 </div>
-                <input id="submit" type="submit" />
             </div>
         </div>
-    <hr>
-    <footer>
-        <p style="text-align:center">TEAM-ATOM 2012</p>
-    </footer>
-
+        
+        <hr>
+        <footer>
+            <p style="text-align:center">TEAM-ATOM 2012</p>
+        </footer>
     </div> <!-- /container -->
+
 
 <div class="modal-spinner" id="modal_spinner">
 <img src="/assets/img/loading.gif" alt="Cargando..." />

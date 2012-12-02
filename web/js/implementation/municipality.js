@@ -27,7 +27,7 @@ Municipality.prototype.initObject = function (options) {
         codigo : -1,
         departamento : "La Paz",
         width : 14,
-        height : 14
+        height : 14,
 
     };
     $.extend(true, defaults, options);
@@ -40,12 +40,20 @@ Municipality.prototype.initObject = function (options) {
 };
 
 Municipality.prototype.paint = function () {
+
+    if (!this.html) {
+        return this;
+    }
     if (this.selected) {
         //this.html.style.backgroundImage = "url(js/implementation/img/municipio_verde.jpg";
-        this.html.style.backgroundImage = "url(/js/implementation/img/municipio_pocoyo.jpg";
+        //this.html.style.backgroundImage = "url(/js/implementation/img/municipio_verde.jpg";
+        this.html.className = "selectedMunicipality";
     } else {
-        this.html.style.backgroundImage = "url(/js/implementation/img/municipio_azul.jpg";
+//        this.html.style.backgroundImage = "url(/js/implementation/img/municipio_azul.jpg";
+        this.html.className = "deselectedMunicipality";
+
     }
+    return this;
 };
 Municipality.prototype.createHTML = function () {
     GenericObject.prototype.createHTML.call(this);
@@ -62,6 +70,7 @@ Municipality.prototype.createHTML = function () {
     this.info.style.height = "80px";
     this.info.style.backgroundColor = "#737224";
     this.info.style.border = "thin black solid";
+    this.info.style.zIndex = 10;
 
     this.html.appendChild(this.info);
     return this.html;
@@ -71,7 +80,8 @@ Municipality.prototype.attachListeners = function () {
     var $municipality = $(this.html);
     $municipality.on('mouseover', this.onMouseOver(this))
         .on('click', this.onClick(this))
-        .on('mouseout', this.onMouseOut(this));
+        .on('mouseout', this.onMouseOut(this))
+        .on('dblclick', this.onDblClick(this));
 };
 
 Municipality.prototype.onMouseOver = function (municipality) {
@@ -80,6 +90,11 @@ Municipality.prototype.onMouseOver = function (municipality) {
     }
 };
 
+Municipality.prototype.onDblClick = function (municipality) {
+    return function (e, ui) {
+        municipality.canvas.graphics[0].setToTendency(municipality);
+    }
+}
 Municipality.prototype.onMouseOut = function (municipality) {
     return function (e, ui) {
         municipality.showInfo(false);
@@ -88,9 +103,6 @@ Municipality.prototype.onMouseOut = function (municipality) {
 Municipality.prototype.onClick = function (municipality) {
     return function (e, ui) {
         municipality.setSelected(true);
-        $.getJSON('js/graphics_lib/data.json', function (data) {
-            console.log(data);
-        });
     }
 };
 

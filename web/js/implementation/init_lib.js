@@ -29,8 +29,8 @@ function init_lib() {
             axis : [
                 {
                     x : 0,
-                    y : 400,
-                    width : 600,
+                    y : 300,
+                    width : 500,
                     height : 30,
                     minVal : 0,
                     maxVal : 100,
@@ -41,9 +41,9 @@ function init_lib() {
                 },
                 {
                     x : 0,
-                    y : 400,
+                    y : 300,
                     width : 30,
-                    height : 600,
+                    height : 500,
                     minVal : 0,
                     maxVal : 100,
                     increment : 10,
