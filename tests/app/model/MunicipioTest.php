@@ -22,12 +22,11 @@ class MunicipioTest extends Generic_Tests_DatabaseTestCase
         parent::setUp();
     }
 
-    public function getDataSet()
+    protected function getDataSet()
     {
         $ds = $this->createMySQLXMLDataSet($this->fixtures.'/Database/empty-database.xml');
 
-        $compositeDs = new \PHPUnit_Extensions_Database_DataSet_CompositeDataSet(array());
-        $compositeDs->addDataSet($ds);
+        $compositeDs = new \PHPUnit_Extensions_Database_DataSet_CompositeDataSet(array($ds));
 
         return $compositeDs;
     }
@@ -38,10 +37,11 @@ class MunicipioTest extends Generic_Tests_DatabaseTestCase
         $expected = $this->createMySQLXMLDataSet($fixture);
         $actual = new \PHPUnit_Extensions_Database_DataSet_QueryDataSet($this->getConnection());
         $actual->addTable('municipio');
+        
         $this->assertEquals(0, $this->getConnection()->getRowCount('municipio'));
     }
 
-    public function testInsertOneRowOnMunicipio()
+    public function testInsertTwoRowsOnMunicipio()
     {
         $data_input01 = array(
                 'nombre' => 'San Borja',

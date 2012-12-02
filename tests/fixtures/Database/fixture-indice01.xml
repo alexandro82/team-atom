@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <database name="atom_test">
+        <table_data name="municipio">
+            <row>
+                <field name="id">1</field>
+                <field name="municipio_nombre">San Borja</field>
+                <field name="municipio_departamento">Beni</field>
+                <field name="municipio_longitud">-66.6796807</field>
+                <field name="municipio_latitud">-14.9252762</field>
+                <field name="municipio_categoria">C</field>
+                <field name="municipio_codigo_ine">80302</field>
+                <field name="municipio_codigo_ine_anterior">80302</field>
+                <field name="municipio_codigo_economia_finanzas">1808</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            <row>
+                <field name="id">2</field>
+                <field name="municipio_nombre">Santa Rosa</field>
+                <field name="municipio_departamento">Beni</field>
+                <field name="municipio_longitud">-66.737239</field>
+                <field name="municipio_latitud">-13.4617941</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">80303</field>
+                <field name="municipio_codigo_ine_anterior">80303</field>
+                <field name="municipio_codigo_economia_finanzas">1809</field>
+                <field name="municipio_estado">1</field>
+            </row>
+        </table_data>
+        <table_data name="indicador">
+            <row>
+                <field name="id">1</field>
+                <field name="indicador_descripcion">EJECUCION DE RECURSOS</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+            <row>
+                <field name="id">2</field>
+                <field name="indicador_descripcion">GESTION FINANCIERA</field>
+                <field name="indicador_tipo">INDICADOR</field>
+                <field name="indicador_estado">1</field>
+            </row>
+        </table_data>
+    </database>
+</mysqldump>

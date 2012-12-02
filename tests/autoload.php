@@ -10,9 +10,9 @@ spl_autoload_register(
                 'atom\\test\\database\\databaseconnectiontest' => '/app/database/DatabaseConnectionTest.php',
                 'atom\\test\\database\\generic_tests_databasetestcase' => '/app/database/Generic_Tests_DatabaseTestCase.php',
                 'atom\\test\\database\\truncateoperation' => '/app/database/Generic_Tests_DatabaseTestCase.php',
-                'atom\\test\\model\\municipiotest' => '/app/model/MunicipioTest.php',
                 'atom\\test\\model\\indicadortest' => '/app/model/IndicadorTest.php',
                 'atom\\test\\model\\indicetest' => '/app/model/IndiceTest.php',
+                'atom\\test\\model\\municipiotest' => '/app/model/MunicipioTest.php'
             );
         }
         $cn = strtolower($class);

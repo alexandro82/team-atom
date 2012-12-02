@@ -89,7 +89,7 @@ class Indice extends DatabaseConnection
     {
         try {
             $pdo = $this->getConnection();
-            $query = 'INSERT INTO indice (indice_municipio_id, indice_indicador_id, '
+            $query = 'INSERT INTO indice (municipio_id, indicador_id, '
                 . ' indice_gestion, indice_valor, indice_estado ) '
                 . ' values (:municipio_id, :indicador_id, :gestion, '
                 . ' :valor, :estado )';
