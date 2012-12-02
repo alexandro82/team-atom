@@ -69,6 +69,16 @@ h4 {
     <div class="container-fluid">
         <div class="row-fluid">
             <?php include '../leftbar.php'; ?>
+<<<<<<< HEAD
+    
+            <div class="forms span3" style="position:relative;">
+                <div id="form_consulta" class="forms">
+                    <form  class="form">
+                        <label for="anio">A&ntilde;o:</label>
+                        <input name="anio" id="anio" />
+                    </form>
+                </div>
+=======
 
             <div class="span3">
                 <form  id="consulta_indice" class="form" style="width:100%">
@@ -116,6 +126,7 @@ h4 {
             </div>
             
             <div class="forms offset5" style="position:relative;">
+>>>>>>> 86b348e3dfc3f2fa9bde45033e936588b11e81ce
                 <div id="canvas">
                 </div>
             </div>
