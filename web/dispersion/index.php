@@ -54,7 +54,13 @@ h4 {
         <div class="row-fluid">
             <?php include '/../leftbar.php'; ?>
     
-            <div class="forms span9" >
+            <div class="forms span3" style="position:relative;">
+                <div id="form_consulta" class="forms">
+                    <form  class="form">
+                        <label for="anio">A&ntilde;o:</label>
+                        <input name="anio" id="anio" />
+                    </form>
+                </div>
                 <div id="canvas">
                 </div>
             </div>
