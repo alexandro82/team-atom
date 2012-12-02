@@ -42,11 +42,11 @@ h4 {
 
 <body onload="init_lib();">
 <!-- BODY -->
-    <?php include '/../navbar.php'; ?>
+    <?php include '../navbar.php'; ?>
 
     <div class="container-fluid">
         <div class="row-fluid">
-            <?php include '/../leftbar.php'; ?>
+            <?php include '../leftbar.php'; ?>
     
             <div class="forms">
                 <div id="canvas">
