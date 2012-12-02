@@ -48,7 +48,7 @@ h4 {
     <div class="row-fluid">
         <?php include 'leftbar.php'; ?>
         
-        <div class="forms">
+        <div class="forms span9">
         </div>
     </div>
     <hr>

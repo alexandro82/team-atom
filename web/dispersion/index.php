@@ -50,22 +50,20 @@ h4 {
 <!-- BODY -->
     <?php include '/../navbar.php'; ?>
 
-
     <div class="container-fluid">
         <div class="row-fluid">
             <?php include '/../leftbar.php'; ?>
     
-            <div class="forms">
+            <div class="forms span9" >
                 <div id="canvas">
                 </div>
-                <input id="submit" type="submit" />
             </div>
         </div>
-    <hr>
-    <footer>
-        <p style="text-align:center">TEAM-ATOM 2012</p>
-    </footer>
-
+        
+        <hr>
+        <footer>
+            <p style="text-align:center">TEAM-ATOM 2012</p>
+        </footer>
     </div> <!-- /container -->
 
 

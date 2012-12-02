@@ -5,10 +5,3 @@
 *.kdev4
 *.swp
 *~
-
-<<<<<<< Updated upstream
-=======
-config/parameters.xml.dist
->>>>>>> 14144c852b62f07f3b2e1e48ff315d16b2663617
-/nbproject/private/
->>>>>>> Stashed changes
