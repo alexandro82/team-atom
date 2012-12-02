@@ -102,5 +102,37 @@ class Indice extends DatabaseConnection
             throw $e;
         }
     }
+
+    /**
+     * Get Municipio By Indice
+     */
+    public function getIndiceByIndicadorAndYear($indicador_id, $year)
+    {
+        $data = array();
+        try {
+            $pdo = $this->getConnection();
+            $query = 'select i.id, '
+                . ' i.indice_gestion as gestion, '
+                . ' i.indice_valor as valor, '
+                . ' i.municipio_id, '
+                . ' i.indicador_id, '
+                . ' ir.indicador_descripcion as indicador,'
+                . ' i.indice_estado '
+                . ' from indice i '
+                . ' left join indicador ir on (ir.id = i.indicador_id) '
+                . ' where i.indicador_id = :indicador_id '
+                . ' and i.indice_gestion = :year '
+                . ' order by i.municipio_id ';
+            $stmt = $pdo->prepare($query);
+            $stmt->bindValue(':indicador_id', $indicador_id);
+            $stmt->bindValue(':year', $year);
+            $stmt->execute();
+            $data = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        } catch (\Exception $e) {
+            $msg = "Error Indice::getIndiceByIndicadorAndYear:\n$e";
+            error_log($msg);
+        }
+        return $data;
+    }
 }
 
