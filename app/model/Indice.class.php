@@ -143,7 +143,7 @@ class Indice extends DatabaseConnection
     /**
      * Get Municipio By Indice
      */
-    public function getIndiceByIndicador($indicador_id)
+    public function getIndiceByIndicador($indicador_id, $municipio_id)
     {
         $data = array();
         try {
@@ -151,7 +151,7 @@ class Indice extends DatabaseConnection
             $query = 'select i.id, '
             . ' i.indice_gestion as gestion, '
             . ' i.indice_valor as valor, '
-            . ' i.municipio_id, '
+            . ' i.municipio_id as municipio_id, '
             . ' m.municipio_nombre as municipio, '
             . ' m.municipio_categoria as categoria, '
             . ' i.indicador_id, '
