@@ -42,63 +42,24 @@ h4 {
 
 <body onload="init_lib();">
 <!-- BODY -->
-<div class="navbar navbar-fixed-top">
-<div class="navbar-inner">
-<div class="container">
-<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-<span class="icon-bar"></span>
-<span class="icon-bar"></span>
-</a>
-<a class="brand" href="index.php">DAL-2012</a>
-<div class="nav-collapse">
-<ul class="nav">
-<li class="active"><a href="index.php">Menu 01</a></li>
-<li><a href="reportes/index.php">Menu 02</a></li>
-</ul>
-</div><!--/.nav-collapse -->
-</div>
-</div>
-</div>
+    <?php include '/../navbar.php'; ?>
 
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="span3">
-            <div class="well sidebar-nav">
-                <ul class="nav nav-list">
-                    <li class="nav-header">Sidebar</li>
-                    <li class="active"><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <?php include '/../leftbar.php'; ?>
+    
+            <div class="forms">
+                <div id="canvas">
+                </div>
+                <input id="submit" type="submit" />
+            </div>
+        </div>
+    <hr>
+    <footer>
+        <p style="text-align:center">TEAM-ATOM 2012</p>
+    </footer>
 
-                    <li class="nav-header">Sidebar</li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-
-                    <li><a href="#">Link</a></li>
-                    <li class="nav-header">Sidebar</li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                </ul>
-
-            </div><!--/.well -->
-        </div><!--/span-->
-<div class="forms">
-<div id="canvas">
-</div>
-<input id="submit" type="submit" />
-</div>
-</div>
-<hr>
-<footer>
-<p style="text-align:center">TEAM-ATOM 2012</p>
-</footer>
-
-</div> <!-- /container -->
+    </div> <!-- /container -->
 
 <div class="modal-spinner" id="modal_spinner">
 <img src="/assets/img/loading.gif" alt="Cargando..." />
