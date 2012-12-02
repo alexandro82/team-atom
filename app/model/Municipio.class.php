@@ -148,8 +148,8 @@ class Municipio extends DatabaseConnection
     {
         $data = array();
         try {
-            $departamento = null;
-            if (null === $d) {
+            $departamento = $d;
+            if (null === $departamento) {
                 $departamento = '%%';
             } else {
                 $departamento = "%" . $d ."%";
