@@ -20,10 +20,15 @@ try {
         
 if ($aux == 0) {$a=""; $aux=1;} else $a=",";
 
-$color= "e05b2f";
-$radio=$fila["valor"];
-$lon=$fila["municipio_longitud"];
-$lat=$fila["municipio_latitud"];
+$valor=$fila["valor"];
+if (($valor <= 100) AND $valor >80) $color= "BDFF7B";
+    elseif (($valor <= 80) AND $valor >60) $color= "E7FF6F";
+        elseif (($valor <= 60) AND $valor >40) $color= "FFFF5B";
+            elseif (($valor <= 40) AND $valor >20) $color= "FFAD3A";
+                elseif ($valor <= 20) $color= "FF4016";
+$radio=$fila["valor"]/7;
+$lon=$fila["longitud"];
+$lat=$fila["latitud"];
 $nombre=$fila["municipio"];
 $departamento=$fila["departamento"];
 $puntos="[".$lon.", ".$lat."]";

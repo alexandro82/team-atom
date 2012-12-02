@@ -6,7 +6,7 @@ include_once("./conectar.php");
 <!DOCTYPE html>
 <html>
     <head>
-        
+        <title>Mapa de Municipios</title>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8" />  
         <!-- <link rel="stylesheet" type="text/css" href="../assets/css/estilo.css" /> -->
         <script src="../lib/openlayers/OpenLayers.js" type="text/javascript"></script>
@@ -123,6 +123,46 @@ include_once("./conectar.php");
         
         
             </script>
+            <style type="text/css">
+                #map{
+                    border: solid 1px black; 
+                    width:640px; 
+                    height:640px;
+                    -moz-border-radius: 5px;
+                    border-radius: 5px;
+                }
+                
+                .desc
+                {
+                   margin-top: 10px; 
+                   font-family: Helvetica, Verdana, sans-serif;
+                   width:620px; 
+                }
+                
+                .leyenda
+                {
+                  margin-top: 10px; 
+                  padding-top: 5px;
+                  background-color: #C9C9C9;
+                  width:620px;
+                  height:30px;
+                  -moz-border-radius: 10px;
+                  border-radius: 10px;  
+                }
+                
+                .leyenda table
+                {
+                   width: 610px; 
+                }
+                
+                .leyenda table td
+                {
+                    width: 20%;
+                    text-align: center;
+                    font-size: 14px;
+                    font-family: Helvetica, Verdana, sans-serif;
+                }
+            </style>
         </head>
    <body onload="init()">
        <div class="titulo" align="center" >
@@ -130,7 +170,23 @@ include_once("./conectar.php");
        </div>
        <div class="principal">
        <div align="center" class="mapa">
-           <div style="border: solid 1px black; width:640px; height:640px;" id="map"></div>
+           <div id="map"></div>
+       </div>
+       <div align="center">    
+       <div class="desc" >
+           Estado de los municipios
+       </div>
+       <div class="leyenda" style="">
+           <table>
+               <tr>
+                   <td style="background-color: #BDFF7B;">Muy bueno</td>
+                   <td style="background-color: #E7FF6F;">Bueno</td>
+                   <td style="background-color: #FFFF5B;">Regular</td>
+                   <td style="background-color: #FFAD3A;">Malo</td>
+                   <td style="background-color: #FF4016;">Muy Malo</td>
+               </tr>
+           </table>
+       </div>
        </div>
 
    </body>
