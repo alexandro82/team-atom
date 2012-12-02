@@ -14,15 +14,15 @@ function init_lib() {
             municipality;
         canvas = new AppCanvas({
             id : "canvas",
-            width : '800',
-            height : '800',
+            width : '100',
+            height : '100',
             municipalities: data
         });
 
         var graphic = new DispersionGraphic({
             id : "dispersion",
-            width : 1100,
-            height : 1100,
+            width : 100,
+            height : 100,
             x : 10,
             y : 10,
             canvas : canvas,
