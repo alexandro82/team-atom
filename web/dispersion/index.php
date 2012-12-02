@@ -1,3 +1,19 @@
+<?php
+require_once __DIR__.'/../../app/autoload.php';
+
+use atom\model\Municipio;
+
+$municipio = new Municipio();
+$municipios = $municipio->getMunicipiosByMunicipioName('');
+
+$indicadores = array (
+    array('id' => '2', 'indicador' => 'Ejecución de Gasto'),
+    array('id' => '1', 'indicador' => 'Ejecución de Recurso'),
+    array('id' => '31', 'indicador' => 'Gestión Financiera'),
+    array('id' => '32', 'indicador' => 'Gobernabilidad'),
+);
+?>
+
 <!DOCTYPE html>
 <html lang="es" class="no-js">
 <head>
@@ -53,6 +69,7 @@ h4 {
     <div class="container-fluid">
         <div class="row-fluid">
             <?php include '../leftbar.php'; ?>
+<<<<<<< HEAD
     
             <div class="forms span3" style="position:relative;">
                 <div id="form_consulta" class="forms">
@@ -61,10 +78,66 @@ h4 {
                         <input name="anio" id="anio" />
                     </form>
                 </div>
+=======
+
+            <div class="span3">
+                <form  id="consulta_indice" class="form" style="width:100%">
+                    <label for="indicador_a">Indicador 1</label>
+                    <select name="indicador_a" id="indicador_a">
+                        <?php foreach($indicadores as $i): ?>
+                        <option value="<?php echo $i['id']; ?>">
+                            <?php echo $i['indicador']; ?>
+                        </option>
+                        <?php endforeach; ?>
+                    </select>
+                    
+                    <label for="indicador_b">Indicador 2</label>
+                    <select name="indicador_b" id="indicador_b">
+                        <?php foreach($indicadores as $i): ?>
+                        <option value="<?php echo $i['id']; ?>">
+                            <?php echo $i['indicador']; ?>
+                        </option>
+                        <?php endforeach; ?>
+                    </select>
+
+                    <label for="gestion">Gesti&oacute;n:</label>
+                    <select name="gestion" id="gestion">
+                        <?php foreach(range(2009, 2005) as $i): ?>
+                        <option value="<?php echo $i; ?>">
+                            <?php echo $i; ?>
+                        </option>
+                        <?php endforeach; ?>
+                    </select>
+                    
+                    <label for="municipio">Municipio:</label>
+                    <select name="municipio" id="municipio">
+                        <option value="">Todos</option>
+                        <?php foreach($municipios as $m): ?>
+                        <option value="<?php echo $m['id']; ?>">
+                            <?php echo $m['nombre']; ?>
+                        </option>
+                        <?php endforeach; ?>
+                    </select>
+
+                    <br/>
+                    <br/>
+                    <input type="submit" class="btn" value="ver" />
+                </form>
+            </div>
+            
+            <div class="forms offset5" style="position:relative;">
+>>>>>>> 86b348e3dfc3f2fa9bde45033e936588b11e81ce
                 <div id="canvas">
                 </div>
             </div>
         </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         
         <hr>
         <footer>
@@ -111,8 +184,13 @@ h4 {
     <script type="text/javascript">
         
         $(document).ready(function() {
-            $("#submit").on('click', function(){
-                initDispersion();
+            $("#consulta_indice").on('click', function(event){
+                event.preventDefault();
+                var indicador_a = $(this).find('#indicador_a option:selected').val();
+                var indicador_b = $(this).find('#indicador_b option:selected').val();
+                var gestion = $(this).find('#gestion option:selected').val();
+                var municipio = $(this).find('#municipio option:selected').val();
+                canvas.graphics[0].setParameters(indicador_a, indicador_b, gestion, municipio);
             });
         });
         

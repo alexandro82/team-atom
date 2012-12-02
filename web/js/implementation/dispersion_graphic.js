@@ -14,6 +14,9 @@ var DispersionGraphic = function (options) {
         this.xVariables = [];
     this.yVariables = [];
     this.points = [];
+    this.year = 2005;
+    this.xValId = 0;
+    this.yValId = 0;
     DispersionGraphic.prototype.initObject.call(this, options);
 };
 
@@ -41,6 +44,7 @@ DispersionGraphic.prototype.createVariable = function (options) {
 
 DispersionGraphic.prototype.initVariables = function (array, variables) {
     var i;
+    array = [];
     for (i = 0; i < variables.length; i += 1) {
         array.push(this.createVariable(variables[i]));
     }
@@ -111,10 +115,12 @@ DispersionGraphic.prototype.createHTML = function () {
     return this.html;
 };
 
-DispersionGraphic.prototype.loadPoints = function (xVariables, yVariables) {
+DispersionGraphic.prototype.loadPoints = function (xVariables, yVariables, dontInit) {
+    if (!dontInit) {
     this.initXVariables(xVariables)
-        .initYVariables(yVariables)
-        .setMiddlePoint()
+        .initYVariables(yVariables);
+    }
+        this.setMiddlePoint()
         .initPoints()
         .paint();
 };
@@ -128,6 +134,74 @@ DispersionGraphic.prototype.paint = function () {
     return this;
 };
 
-DispersionGraphic.prototype.setToTendency = function (municipality) {
-    alert(municipality.code);
+
+DispersionGraphic.prototype.compFunction = function (data1, data2) {
+    return data.municipio_id < data.municipio_id;
+};
+DispersionGraphic.prototype.setIndex = function (data,mun, catneeded, y) {
+    var i,
+        sum,
+        varData = [];
+    data.sort(this.compFunction);
+    if (catneeded) {
+        for (i in data) {
+            if (data[i].gestion === this.year && data[i].categoria === mun.category) {
+                if (y) {
+                    varData.push(data[i]);
+                    sum += data[i].valor;
+                } else {
+                    varData.push(data[i]);
+                    sum += data[i].valor;
+                }
+            }
+        }
+    }
+    else {
+
+        for (i in data) {
+            if (data[i].gestion === this.year) {
+                if (y) {
+                    varData.push(data[i]);
+                    sum += data[i].valor;
+                } else {
+                    varData.push(data[i]);
+                    sum += data[i].valor;
+                }
+            }
+        }
+    }
+
+    if (y) {
+        this.initYVariables(varData);
+        this.yVariables[0].criteria = sum / this.yVariables.length;
+    } else {
+        this.initXVariables(varData);
+        this.xVariables[0].criteria = sum / this.xVariables.length;
+
+    }
+};
+
+DispersionGraphic.prototype.setParameters = function (index1, index2, year, municip) {
+
+    var catneed1 = false,
+        catneed2 = false,
+        municipality = this.canvas.getMunicipality(municip);
+    if (index1 == "1" || index1 == "2" || index1 == "31") {
+        catneed1 = true;
+    }
+    if (index2 == "1" || index2 == "2" || index2 == "31") {
+        catneed2 = true;
+    }
+
+    if (index1 == index2) {
+        return;
+    }
+
+    $.post('dispesion/indice.php',""+index1 ,  function (data) {
+        this.setIndex(data, municipality,catneed1);
+        $.post('dispesion/indice.php', ""+index2,  function (data) {
+            this.setIndex(data, municipality, catneed2, true);
+            this.loadPoints(this.xVariables, this.yVariables, true);
+        });
+    });
 };

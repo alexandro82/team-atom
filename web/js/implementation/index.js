@@ -19,7 +19,7 @@ Index.prototype.name = "Index";
 Index.prototype.initObject = function(options) {
     var defaults = {
 
-        indicators : [],
+        indicators : []
     };
 
     $.extend(true, defaults, options);

@@ -11,8 +11,8 @@ $indicadores_x = array();
 $indicadores_y = array();
 try {
     $indice = new Indice();
-    $indicadores_x = $indice->getIndiceByIndicadorAndYear('1', '2005');
-    $indicadores_y = $indice->getIndiceByIndicadorAndYear('2', '2005');
+    $indicadores_x = $indice->getIndiceByIndicadorAndYear('1');
+    $indicadores_y = $indice->getIndiceByIndicadorAndYear('2');
     $response[] = $indicadores_x;
     $response[] = $indicadores_y;
 } catch (\Exception $e) {

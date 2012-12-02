@@ -189,7 +189,9 @@ class Municipio extends DatabaseConnection
                 . " municipio_categoria as categoria, "
                 . " municipio_codigo_ine as codigo"
                 . " FROM municipio "
-                . " WHERE municipio_nombre LIKE :municipio";
+                . " WHERE municipio_nombre LIKE :municipio"
+                . " ORDER BY nombre asc ";
+                
             $pdo = $this->getConnection();
             $stmt = $pdo->prepare($query);
             $stmt->bindValue(':municipio', $municipio);
