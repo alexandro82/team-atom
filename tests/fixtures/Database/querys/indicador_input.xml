@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <database name="atom_test">
+        <table_data name="indicador">
+            <row>
+                <field name="id">1</field>
+                <field name="indicador_descripcion">EJECUCIÓN DE RECURSOS</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">2</field>
+                <field name="indicador_descripcion">EJECUCION DEL GASTO</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">3</field>
+                <field name="indicador_descripcion">EFICIENCIA EN LA EJECUCIÓN DE RECURSOS Y GASTOS</field>
+                <field name="indicador_tipo">INDICADOR</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">4</field>
+                <field name="indicador_descripcion">LIQUIDEZ</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">5</field>
+                <field name="indicador_descripcion">SOLVENCIA</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">6</field>
+                <field name="indicador_descripcion">RESULTADO DEL INGRESO Y EL GASTO</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">7</field>
+                <field name="indicador_descripcion">DEPENDENCIA FINANCIERA</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">8</field>
+                <field name="indicador_descripcion">GESTION FINANCIERA</field>
+                <field name="indicador_tipo">INDICADOR</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">9</field>
+                <field name="indicador_descripcion">AUTONOMÍA FINANCIERA</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">10</field>
+                <field name="indicador_descripcion">INGRESOS PROPIOS POR HABITANTE</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">11</field>
+                <field name="indicador_descripcion">CAPACIDAD DE FINANCIAMIENTO DE LOS SERVICIOS PERSONALES</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">12</field>
+                <field name="indicador_descripcion">EFICIENCIA RECAUDADORA DE LOS IMPUESTOS MUNICIPALES</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">13</field>
+                <field name="indicador_descripcion">GESTIÓN FISCAL</field>
+                <field name="indicador_tipo">INDICADOR</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">14</field>
+                <field name="indicador_descripcion">PESO DE LA INVERSIÓN EN PROYECTOS CON IDH</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">15</field>
+                <field name="indicador_descripcion">PESO DE LA INVERSIÓN EN PROYECTOS CON HIPC</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">16</field>
+                <field name="indicador_descripcion">LIMITE DE GASTOS DE FINANCIAMIENTO</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">17</field>
+                <field name="indicador_descripcion">ADMINISTRACIÓN DE LAS TRANSFERENCIAS TGN</field>
+                <field name="indicador_tipo">INDICADOR</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">18</field>
+                <field name="indicador_descripcion">COSTO DE LA DEUDA</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">19</field>
+                <field name="indicador_descripcion">CAPACIDAD DE PAGO DE LA DEUDA </field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">20</field>
+                <field name="indicador_descripcion">SERVICIO DE LA DEUDA</field>
+                <field name="indicador_tipo">INDICADOR</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">21</field>
+                <field name="indicador_descripcion">EFICACIA</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">22</field>
+                <field name="indicador_descripcion">PARTICIPACION</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">23</field>
+                <field name="indicador_descripcion">RENDICIÓN CUENTAS</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">24</field>
+                <field name="indicador_descripcion">ESTABILIDAD POLITICA</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">25</field>
+                <field name="indicador_descripcion">PROCESO CONTROL</field>
+                <field name="indicador_tipo">SUBINDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">26</field>
+                <field name="indicador_descripcion">EDUCACION</field>
+                <field name="indicador_tipo">INDICADOR</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">27</field>
+                <field name="indicador_descripcion">SALUD</field>
+                <field name="indicador_tipo">INDICADOR</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">28</field>
+                <field name="indicador_descripcion">DEMOGRAFIA</field>
+                <field name="indicador_tipo">INDICADOR</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">29</field>
+                <field name="indicador_descripcion">VIVIENDA</field>
+                <field name="indicador_tipo">INDICADOR</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">30</field>
+                <field name="indicador_descripcion">ECONOMIA</field>
+                <field name="indicador_tipo">INDICADOR</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">31</field>
+                <field name="indicador_descripcion">GESTIÓN FINANCIERA</field>
+                <field name="indicador_tipo">INDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">32</field>
+                <field name="indicador_descripcion">GOBERNABILIDAD</field>
+                <field name="indicador_tipo">INDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">33</field>
+                <field name="indicador_descripcion">VULNERABILIDAD</field>
+                <field name="indicador_tipo">INDICE</field>
+                <field name="indicador_estado">1</field>
+            </row>
+        </table_data>
+    </database>
+</mysqldump>
+

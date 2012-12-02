@@ -17,6 +17,7 @@
         <testsuite name="Project Test Suite">
           <directory>tests/app/database/</directory>
           <directory>tests/app/model/</directory>
+          <directory>tests/app/querys/</directory>
         </testsuite>
     </testsuites>
 
