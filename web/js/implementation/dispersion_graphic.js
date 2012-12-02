@@ -15,6 +15,8 @@ var DispersionGraphic = function (options) {
     this.yVariables = [];
     this.points = [];
     this.year = 2005;
+    this.xValId = 0;
+    this.yValId = 0;
     DispersionGraphic.prototype.initObject.call(this, options);
 };
 
@@ -179,13 +181,27 @@ DispersionGraphic.prototype.setIndex = function (data,mun, catneeded, y) {
     }
 };
 
-DispersionGraphic.prototype.setToTendency = function (municipality) {
-    var $mun = $(municipality.html);
-    $.post('dispesion/indice.php', "1",  function (data) {
-        this.setIndex(data, municipality);
-        $.post('dispesion/indice.php', "2",  function (data) {
-            this.setIndex(data, municipality, true);
-            this.loadPoints(this.xVariables, this.yVariables, false, true);
+DispersionGraphic.prototype.setParameters = function (index1, index2, year, municip) {
+
+    var catneed1 = false,
+        catneed2 = false,
+        municipality = this.canvas.getMunicipality(municip);
+    if (index1 == "1" || index1 == "2" || index1 == "31") {
+        catneed1 = true;
+    }
+    if (index2 == "1" || index2 == "2" || index2 == "31") {
+        catneed2 = true;
+    }
+
+    if (index1 == index2) {
+        return;
+    }
+
+    $.post('dispesion/indice.php',""+index1 ,  function (data) {
+        this.setIndex(data, municipality,catneed1);
+        $.post('dispesion/indice.php', ""+index2,  function (data) {
+            this.setIndex(data, municipality, catneed2, true);
+            this.loadPoints(this.xVariables, this.yVariables, true);
         });
     });
 };
