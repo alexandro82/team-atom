@@ -64,21 +64,11 @@ h4 {
 
 <body onload="init_lib();">
 <!-- BODY -->
-    <?php include '../navbar.php'; ?>
+    
 
     <div class="container-fluid">
         <div class="row-fluid">
-            <?php include '../leftbar.php'; ?>
-<<<<<<< HEAD
-    
-            <div class="forms span3" style="position:relative;">
-                <div id="form_consulta" class="forms">
-                    <form  class="form">
-                        <label for="anio">A&ntilde;o:</label>
-                        <input name="anio" id="anio" />
-                    </form>
-                </div>
-=======
+            
 
             <div class="span3">
                 <form  id="consulta_indice" class="form" style="width:100%">
@@ -126,7 +116,6 @@ h4 {
             </div>
             
             <div class="forms offset5" style="position:relative;">
->>>>>>> 86b348e3dfc3f2fa9bde45033e936588b11e81ce
                 <div id="canvas">
                 </div>
             </div>
@@ -184,7 +173,7 @@ h4 {
     <script type="text/javascript">
         
         $(document).ready(function() {
-            $("#consulta_indice").on('click', function(event){
+            $("#consulta_indice").on('submit', function(event){
                 event.preventDefault();
                 var indicador_a = $(this).find('#indicador_a option:selected').val();
                 var indicador_b = $(this).find('#indicador_b option:selected').val();

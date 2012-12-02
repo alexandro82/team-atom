@@ -147,7 +147,7 @@ Axis.prototype.createHTML = function (middlePoint) {
         });
     }
     this.html.appendChild(this.line.getHTML());
-    this.generateScale(middlePoint);
+    this.generateScale();
     return this.html;
 };
 

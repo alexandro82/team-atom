@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1">
     <title>Arbol de Indicadores</title>
     <script type="text/javascript" src="../lib/d3js/d3.v2.js"></script>
     <style type="text/css">

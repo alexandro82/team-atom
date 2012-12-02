@@ -146,9 +146,13 @@ Municipality.prototype.setSelected = function (selected) {
         this.selected = true;
         this.deselectOthers(this.id);
         this.setDimension(20, 20);
+        if(this.html)
+        this.html.style.zIndex = 10;
     } else {
         this.selected = false;
         this.setDimension(14, 14);
+        if (this.html)
+        this.html.style.zIndex = 1;
     }
     this.setPosition(this.x, this.y);
     this.paint();
