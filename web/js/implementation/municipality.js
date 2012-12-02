@@ -40,12 +40,20 @@ Municipality.prototype.initObject = function (options) {
 };
 
 Municipality.prototype.paint = function () {
+
+    if (!this.html) {
+        return this;
+    }
     if (this.selected) {
         //this.html.style.backgroundImage = "url(js/implementation/img/municipio_verde.jpg";
-        this.html.style.backgroundImage = "url(/js/implementation/img/municipio_pocoyo.jpg";
+        //this.html.style.backgroundImage = "url(/js/implementation/img/municipio_verde.jpg";
+        this.html.className = "selectedMunicipality";
     } else {
-        this.html.style.backgroundImage = "url(/js/implementation/img/municipio_azul.jpg";
+//        this.html.style.backgroundImage = "url(/js/implementation/img/municipio_azul.jpg";
+        this.html.className = "deselectedMunicipality";
+
     }
+    return this;
 };
 Municipality.prototype.createHTML = function () {
     GenericObject.prototype.createHTML.call(this);
@@ -62,6 +70,7 @@ Municipality.prototype.createHTML = function () {
     this.info.style.height = "80px";
     this.info.style.backgroundColor = "#737224";
     this.info.style.border = "thin black solid";
+    this.info.style.zIndex = 10;
 
     this.html.appendChild(this.info);
     return this.html;

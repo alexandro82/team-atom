@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <databases>
     <database>
-        <username>root</username>
-        <password>mysql</password>
+        <username>thaer</username>
+        <password>sh3llmysql2</password>
         <dbhost>localhost</dbhost>
         <dbname>atom</dbname>
     </database>

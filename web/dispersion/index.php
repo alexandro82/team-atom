@@ -25,6 +25,12 @@ h4 {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+.selectedMunicipality {
+    background-image: url(/js/implementation/img/municipio_verde.jpg);
+}
+.deselectedMunicipality {
+    background-image: url(/js/implementation/img/municipio_azul.jpg);
+}
 </style>
 
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
