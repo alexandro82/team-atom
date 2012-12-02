@@ -23,7 +23,7 @@ class IndicadorTest extends Generic_Tests_DatabaseTestCase
         parent::setUp();
     }
 
-    public function getDataSet()
+    protected function getDataSet()
     {
         $fixture = $this->fixtures.'/Database/empty-database.xml';
         $ds = $this->createMySQLXMLDataSet($fixture);
@@ -43,5 +43,33 @@ class IndicadorTest extends Generic_Tests_DatabaseTestCase
         $actual->addTable('indicador');
 
         $this->assertEquals(0, $this->getConnection()->getRowCount('indicador'));
+    }
+
+    public function testInsertTwoRowsOnIndicador()
+    {
+        $data_input01 = array (
+                'descripcion' => 'EJECUCION DE RECURSOS',
+                'tipo' => 'SUBINDICE',
+                'estado' => '1',
+            );
+        $data_input02 = array (
+                'descripcion' => 'GESTION FINANCIERA',
+                'tipo' => 'INDICADOR',
+                'estado' => '1',
+            );
+        $this->indicador->setData($data_input01);
+        $this->indicador->save();
+        $this->indicador->setData($data_input02);
+        $this->indicador->save();
+
+        $this->assertEquals(2, $this->getConnection()->getRowCount('indicador'));
+
+        $fixture = $this->fixtures.'/Database/fixture-indicador01.xml';
+        $expected = $this->createMySQLXMLDataSet($fixture);
+
+        $actual = new \PHPUnit_Extensions_Database_DataSet_QueryDataSet($this->getConnection());
+        $actual->addTable('indicador');
+
+        $this->assertDataSetsEqual($expected, $actual);
     }
 }
