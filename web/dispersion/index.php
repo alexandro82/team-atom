@@ -1,14 +1,17 @@
 <?php
 require_once __DIR__.'/../../app/autoload.php';
 
-use atom\model\Indicador;
 use atom\model\Municipio;
 
-$indicador = new Indicador();
-$indicadores  = $indicador->getIndicadorByName('');
 $municipio = new Municipio();
 $municipios = $municipio->getMunicipiosByMunicipioName('');
 
+$indicadores = array (
+    array('id' => '2', 'indicador' => 'Ejecución de Gasto'),
+    array('id' => '1', 'indicador' => 'Ejecución de Recurso'),
+    array('id' => '31', 'indicador' => 'Gestión Financiera'),
+    array('id' => '32', 'indicador' => 'Gobernabilidad'),
+);
 ?>
 
 <!DOCTYPE html>
@@ -73,23 +76,23 @@ h4 {
                     <select name="indicador_a">
                         <?php foreach($indicadores as $i): ?>
                         <option value="<?php echo $i['id']; ?>">
-                            <?php echo $i['indicador_descripcion']; ?>
+                            <?php echo $i['indicador']; ?>
                         </option>
                         <?php endforeach; ?>
                     </select>
                     
-                    <label for="indicador_a">Indicador 2</label>
-                    <select name="indicador_a">
+                    <label for="indicador_b">Indicador 2</label>
+                    <select name="indicador_b">
                         <?php foreach($indicadores as $i): ?>
                         <option value="<?php echo $i['id']; ?>">
-                            <?php echo $i['indicador_descripcion']; ?>
+                            <?php echo $i['indicador']; ?>
                         </option>
                         <?php endforeach; ?>
                     </select>
 
                     <label for="gestion">Gesti&oacute;n:</label>
                     <select name="gestion">
-                        <?php foreach(range(2012, 2000) as $i): ?>
+                        <?php foreach(range(2009, 2005) as $i): ?>
                         <option value="<?php echo $i; ?>">
                             <?php echo $i; ?>
                         </option>
@@ -98,6 +101,7 @@ h4 {
                     
                     <label for="municipio">Municipio:</label>
                     <select name="municipio" id="municipio">
+                        <option value="">Todos</option>
                         <?php foreach($municipios as $m): ?>
                         <option value="<?php echo $m['id']; ?>">
                             <?php echo $m['nombre']; ?>
