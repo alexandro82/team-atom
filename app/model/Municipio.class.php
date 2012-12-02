@@ -75,7 +75,7 @@ class Municipio extends DatabaseConnection
             $this->nombre = $data['nombre'];
             $this->departamento = $data['departamento'];
             $this->longitud = $data['longitud'];
-            $this->latitud = $dat['latitud'];
+            $this->latitud = $data['latitud'];
             $this->categoria = $data['categoria'];
             $this->codigo_ine = $data['codigo_ine'];
             $this->codigo_ine_anterior = $data['codigo_ine_anterior'];

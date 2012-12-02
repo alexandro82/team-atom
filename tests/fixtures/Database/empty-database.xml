@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <database name="atom_test">
+        <table_data name="municipio"></table_data>
+        <table_data name="indicador"></table_data>
+        <table_data name="indice"></table_data>
+    </database>
+</mysqldump>
