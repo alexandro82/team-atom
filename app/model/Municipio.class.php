@@ -182,7 +182,12 @@ class Municipio extends DatabaseConnection
             } else {
                 $municipio = "%" . $m . "%";
             }
-            $query = "SELECT id, municipio_nombre "
+            $query = "SELECT id, municipio_nombre as nombre, "
+                . " municipio_departamento as departamento, "
+                . " municipio_longitud as longitud, "
+                . " municipio_latitud as latitud, "
+                . " municipio_categoria as categoria, "
+                . " municipio_codigo_ine as codigo"
                 . " FROM municipio "
                 . " WHERE municipio_nombre LIKE :municipio";
             $pdo = $this->getConnection();

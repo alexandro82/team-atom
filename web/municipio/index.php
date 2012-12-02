@@ -49,7 +49,7 @@ h4 {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="brand" href="index.php">AtOm - DAL2012</a>
+            <a class="brand" href="/index.php">DAL-2012</a>
             <div class="nav-collapse">
                 <ul class="nav">
                     <li class="active"><a href="index.php">Menu 01</a></li>
@@ -61,8 +61,26 @@ h4 {
 </div>
 <!-- ##################### CONTAINER ############ -->
 <div class="container-fluid">
-    <div class="row-fluid">
-        <div class="forms">
+    <div class="row-fluid" style="width: 100%">
+        <div class="forms" style="margin: 0 auto; width: 70%;">
+            <h2 style="text-align: center;">Municipios Registrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <td>&#35;</td>
+                        <td>NOMBRE</td>
+                        <td>DEPARTAMENTO</td>
+                        <td>LONGITUD</td>
+                        <td>LATITUD</td>
+                        <td>CATEGORIA</td>
+                        <td>CODIGO INE</td>
+                        <td>A. CODIGO INE</td>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot></tfoot>
+            </table>
         </div>
     </div>
     <hr>
