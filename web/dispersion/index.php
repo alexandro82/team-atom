@@ -94,9 +94,12 @@ h4 {
             </div><!--/.well -->
         </div><!--/span-->
 <div class="forms">
+<div id = "main-content" style="position: absolute; left: 300pt; top: 30pt;">
 <div id="canvas">
+
 </div>
-<input id="submit" type="submit" />
+
+</div>
 </div>
 </div>
 <hr>

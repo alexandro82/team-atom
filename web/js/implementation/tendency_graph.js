@@ -8,5 +8,16 @@
 
 var TendencyGraph = function (options) {
     DispersionGraphic.call(this, options);
+    this.wzGraphics = null;
+    TendencyGraph.prototype.initObject.call(this, options);
+};
+
+TendencyGraph.prototype = new DispersionGraphic();
+
+TendencyGraph.prototype.initObject = function (options) {
 
 };
+
+TendencyGraph.prototype.createHTML = function () {
+    DispersionGraphic.prototype.createHTML.call(this);
+}

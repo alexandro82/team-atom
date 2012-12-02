@@ -27,7 +27,7 @@ Municipality.prototype.initObject = function (options) {
         codigo : -1,
         departamento : "La Paz",
         width : 14,
-        height : 14
+        height : 14,
 
     };
     $.extend(true, defaults, options);
@@ -80,7 +80,8 @@ Municipality.prototype.attachListeners = function () {
     var $municipality = $(this.html);
     $municipality.on('mouseover', this.onMouseOver(this))
         .on('click', this.onClick(this))
-        .on('mouseout', this.onMouseOut(this));
+        .on('mouseout', this.onMouseOut(this))
+        .on('dblclick', this.onDblClick(this));
 };
 
 Municipality.prototype.onMouseOver = function (municipality) {
@@ -89,6 +90,11 @@ Municipality.prototype.onMouseOver = function (municipality) {
     }
 };
 
+Municipality.prototype.onDblClick = function (municipality) {
+    return function (e, ui) {
+        municipality.canvas.graphics[0].setToTendency(municipality);
+    }
+}
 Municipality.prototype.onMouseOut = function (municipality) {
     return function (e, ui) {
         municipality.showInfo(false);
@@ -97,9 +103,6 @@ Municipality.prototype.onMouseOut = function (municipality) {
 Municipality.prototype.onClick = function (municipality) {
     return function (e, ui) {
         municipality.setSelected(true);
-        $.getJSON('js/graphics_lib/data.json', function (data) {
-            console.log(data);
-        });
     }
 };
 
