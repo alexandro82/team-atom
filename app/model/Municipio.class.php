@@ -140,4 +140,60 @@ class Municipio extends DatabaseConnection
             throw $e;
         }
     }
+
+    /**
+     * get array of municipios by departamento name
+     */
+    public function getMunicipiosByDepartamento($d = null)
+    {
+        $data = array();
+        try {
+            $departamento = null;
+            if (null === $d) {
+                $departamento = '%%';
+            } else {
+                $departamento = "%" . $d ."%";
+            }
+            $query = " SELECT id, municipio_nombre"
+                . " FROM municipio "
+                . " WHERE municipio_departamento LIKE :departamento";
+            $pdo = $this->getConnection();
+            $stmt = $pdo->prepare($query);
+            $stmt->bindValue(':departamento', $departamento);
+            $stmt->execute();
+            $data = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        } catch (\Exception $e) {
+            $msg = "Error Entity Municipio::getMunicipiosByDepartamento:\n$e";
+            error_log($msg);
+        }
+        return $data;
+    }
+
+    /**
+     * get array of municipios by municipios name
+     */
+    public function getMunicipiosByMunicipioName($m = null)
+    {
+        $data = array();
+        try {
+            $municipio = null;
+            if (null === $m) {
+                $m = '%%';
+            } else {
+                $municipio = "%" . $m . "%";
+            }
+            $query = "SELECT id, municipio_nombre "
+                . " FROM municipio "
+                . " WHERE municipio_nombre LIKE :municipio";
+            $pdo = $this->getConnection();
+            $stmt = $pdo->prepare($query);
+            $stmt->bindValue(':municipio', $municipio);
+            $stmt->execute();
+            $data = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        } catch (\Exception $e) {
+            $msg = "Error Entity Municipio::getMunicipiosByMunicipioName:\n$e";
+            error_log($msg);
+        }
+        return $data;
+    }
 }

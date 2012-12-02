@@ -1,0 +1,983 @@
+<?xml version="1.0"?>
+<mysqldump xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <database name="atom_test">
+        <table_data name="municipio">
+            <row>
+                <field name="id">162</field>
+                <field name="municipio_nombre">Oruro</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">-67.1108495</field>
+                <field name="municipio_latitud">-17.9616122</field>
+                <field name="municipio_categoria">D</field>
+                <field name="municipio_codigo_ine">40101</field>
+                <field name="municipio_codigo_ine_anterior">40101</field>
+                <field name="municipio_codigo_economia_finanzas">1401</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">163</field>
+                <field name="municipio_nombre">Caracollo</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">162</field>
+                <field name="municipio_latitud">162</field>
+                <field name="municipio_categoria">C</field>
+                <field name="municipio_codigo_ine">40102</field>
+                <field name="municipio_codigo_ine_anterior">40102</field>
+                <field name="municipio_codigo_economia_finanzas">1402</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">164</field>
+                <field name="municipio_nombre">El Choro</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">163</field>
+                <field name="municipio_latitud">163</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">40103</field>
+                <field name="municipio_codigo_ine_anterior">40103</field>
+                <field name="municipio_codigo_economia_finanzas">1403</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">165</field>
+                <field name="municipio_nombre">Sorocachi</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">164</field>
+                <field name="municipio_latitud">164</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">40104</field>
+                <field name="municipio_codigo_ine_anterior">40104</field>
+                <field name="municipio_codigo_economia_finanzas">1435</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">166</field>
+                <field name="municipio_nombre">Challapata</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">165</field>
+                <field name="municipio_latitud">165</field>
+                <field name="municipio_categoria">C</field>
+                <field name="municipio_codigo_ine">40201</field>
+                <field name="municipio_codigo_ine_anterior">40201</field>
+                <field name="municipio_codigo_economia_finanzas">1404</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">167</field>
+                <field name="municipio_nombre">Santuario de Quillacas</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">166</field>
+                <field name="municipio_latitud">166</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">40202</field>
+                <field name="municipio_codigo_ine_anterior">40202</field>
+                <field name="municipio_codigo_economia_finanzas">1405</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">168</field>
+                <field name="municipio_nombre">Huanuni</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">167</field>
+                <field name="municipio_latitud">167</field>
+                <field name="municipio_categoria">C</field>
+                <field name="municipio_codigo_ine">40301</field>
+                <field name="municipio_codigo_ine_anterior">40701</field>
+                <field name="municipio_codigo_economia_finanzas">1406</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">169</field>
+                <field name="municipio_nombre">Machacamarca</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">168</field>
+                <field name="municipio_latitud">168</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">40302</field>
+                <field name="municipio_codigo_ine_anterior">40702</field>
+                <field name="municipio_codigo_economia_finanzas">1407</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">170</field>
+                <field name="municipio_nombre">Poopó (Villa Poopó)</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">169</field>
+                <field name="municipio_latitud">169</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">40401</field>
+                <field name="municipio_codigo_ine_anterior">40601</field>
+                <field name="municipio_codigo_economia_finanzas">1408</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">171</field>
+                <field name="municipio_nombre">Pazña</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">170</field>
+                <field name="municipio_latitud">170</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">40402</field>
+                <field name="municipio_codigo_ine_anterior">40602</field>
+                <field name="municipio_codigo_economia_finanzas">1409</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">172</field>
+                <field name="municipio_nombre">Antequera</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">171</field>
+                <field name="municipio_latitud">171</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">40403</field>
+                <field name="municipio_codigo_ine_anterior">40603</field>
+                <field name="municipio_codigo_economia_finanzas">1410</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">173</field>
+                <field name="municipio_nombre">Eucaliptus</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">-67.4487603</field>
+                <field name="municipio_latitud">-17.6155346</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">40501</field>
+                <field name="municipio_codigo_ine_anterior">41101</field>
+                <field name="municipio_codigo_economia_finanzas">1411</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">174</field>
+                <field name="municipio_nombre">Santiago de Huari</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">173</field>
+                <field name="municipio_latitud">173</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">40601</field>
+                <field name="municipio_codigo_ine_anterior">41401</field>
+                <field name="municipio_codigo_economia_finanzas">1412</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">175</field>
+                <field name="municipio_nombre">Totora</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">174</field>
+                <field name="municipio_latitud">174</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">40701</field>
+                <field name="municipio_codigo_ine_anterior">41301</field>
+                <field name="municipio_codigo_economia_finanzas">1413</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">176</field>
+                <field name="municipio_nombre">Corque</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">-67.7961589</field>
+                <field name="municipio_latitud">-18.4552283</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">40801</field>
+                <field name="municipio_codigo_ine_anterior">40301</field>
+                <field name="municipio_codigo_economia_finanzas">1414</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">177</field>
+                <field name="municipio_nombre">Choque Cota</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">176</field>
+                <field name="municipio_latitud">176</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">40802</field>
+                <field name="municipio_codigo_ine_anterior">40302</field>
+                <field name="municipio_codigo_economia_finanzas">1415</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">178</field>
+                <field name="municipio_nombre">Curahuara de Carangas</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">177</field>
+                <field name="municipio_latitud">177</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">40901</field>
+                <field name="municipio_codigo_ine_anterior">40401</field>
+                <field name="municipio_codigo_economia_finanzas">1416</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">179</field>
+                <field name="municipio_nombre">Turco</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">178</field>
+                <field name="municipio_latitud">178</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">40902</field>
+                <field name="municipio_codigo_ine_anterior">40402</field>
+                <field name="municipio_codigo_economia_finanzas">1417</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">180</field>
+                <field name="municipio_nombre">Huachacalla</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">-68.2672483</field>
+                <field name="municipio_latitud">-18.7890228</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">41001</field>
+                <field name="municipio_codigo_ine_anterior">40501</field>
+                <field name="municipio_codigo_economia_finanzas">1418</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">181</field>
+                <field name="municipio_nombre">Escara</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">-68.1581541</field>
+                <field name="municipio_latitud">-18.6793848</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">41002</field>
+                <field name="municipio_codigo_ine_anterior">40502</field>
+                <field name="municipio_codigo_economia_finanzas">1419</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">182</field>
+                <field name="municipio_nombre">Cruz de Machacamarca</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">-68.3665051</field>
+                <field name="municipio_latitud">-18.7150467</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">41003</field>
+                <field name="municipio_codigo_ine_anterior">40503</field>
+                <field name="municipio_codigo_economia_finanzas">1420</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">183</field>
+                <field name="municipio_nombre">Yunguyo de Litoral</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">-68.3362323</field>
+                <field name="municipio_latitud">-18.8749336</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">41004</field>
+                <field name="municipio_codigo_ine_anterior">40504</field>
+                <field name="municipio_codigo_economia_finanzas">1421</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">184</field>
+                <field name="municipio_nombre">Esmeralda</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">183</field>
+                <field name="municipio_latitud">183</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">41005</field>
+                <field name="municipio_codigo_ine_anterior">40505</field>
+                <field name="municipio_codigo_economia_finanzas">1422</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">185</field>
+                <field name="municipio_nombre">Toledo</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">-67.3969424</field>
+                <field name="municipio_latitud">-18.265435</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">41101</field>
+                <field name="municipio_codigo_ine_anterior">41001</field>
+                <field name="municipio_codigo_economia_finanzas">1423</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">186</field>
+                <field name="municipio_nombre">Santiago de Andamarca</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">185</field>
+                <field name="municipio_latitud">185</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">41201</field>
+                <field name="municipio_codigo_ine_anterior">41201</field>
+                <field name="municipio_codigo_economia_finanzas">1424</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">187</field>
+                <field name="municipio_nombre">Belén de Andamarca</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">186</field>
+                <field name="municipio_latitud">186</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">41202</field>
+                <field name="municipio_codigo_ine_anterior">41202</field>
+                <field name="municipio_codigo_economia_finanzas">1425</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">188</field>
+                <field name="municipio_nombre">Salinas de Garci Mendoza</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">187</field>
+                <field name="municipio_latitud">187</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">41301</field>
+                <field name="municipio_codigo_ine_anterior">40801</field>
+                <field name="municipio_codigo_economia_finanzas">1426</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">189</field>
+                <field name="municipio_nombre">Pampa Aullagas</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">-67.1435382</field>
+                <field name="municipio_latitud">-19.2162326</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">41302</field>
+                <field name="municipio_codigo_ine_anterior">40802</field>
+                <field name="municipio_codigo_economia_finanzas">1427</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">190</field>
+                <field name="municipio_nombre">La Rivera</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">189</field>
+                <field name="municipio_latitud">189</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">41401</field>
+                <field name="municipio_codigo_ine_anterior">41501</field>
+                <field name="municipio_codigo_economia_finanzas">1428</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">191</field>
+                <field name="municipio_nombre">Todos Santos</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">-68.7474406</field>
+                <field name="municipio_latitud">-19.0146705</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">41402</field>
+                <field name="municipio_codigo_ine_anterior">41502</field>
+                <field name="municipio_codigo_economia_finanzas">1429</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">192</field>
+                <field name="municipio_nombre">Carangas</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">-68.6527805</field>
+                <field name="municipio_latitud">-18.9003995</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">41403</field>
+                <field name="municipio_codigo_ine_anterior">41503</field>
+                <field name="municipio_codigo_economia_finanzas">1430</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">193</field>
+                <field name="municipio_nombre">Sabaya</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">-68.4361863</field>
+                <field name="municipio_latitud">-19.0097605</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">41501</field>
+                <field name="municipio_codigo_ine_anterior">40901</field>
+                <field name="municipio_codigo_economia_finanzas">1431</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">194</field>
+                <field name="municipio_nombre">Coipasa</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">-68.3042332</field>
+                <field name="municipio_latitud">-19.3212555</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">41502</field>
+                <field name="municipio_codigo_ine_anterior">40902</field>
+                <field name="municipio_codigo_economia_finanzas">1432</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">195</field>
+                <field name="municipio_nombre">Chipaya</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">-68.0333533</field>
+                <field name="municipio_latitud">-19.0330026</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">41503</field>
+                <field name="municipio_codigo_ine_anterior">40903</field>
+                <field name="municipio_codigo_economia_finanzas">1433</field>
+                <field name="municipio_estado">1</field>
+            </row>
+
+            <row>
+                <field name="id">196</field>
+                <field name="municipio_nombre">Santiago de Huayllamarca</field>
+                <field name="municipio_departamento">Oruro</field>
+                <field name="municipio_longitud">195</field>
+                <field name="municipio_latitud">195</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">41601</field>
+                <field name="municipio_codigo_ine_anterior">41601</field>
+                <field name="municipio_codigo_economia_finanzas">1434</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            <row>
+                <field name="id">197</field>
+                <field name="municipio_nombre">Potosí</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-65.7570935</field>
+                <field name="municipio_latitud">-19.5818113</field>
+                <field name="municipio_categoria">D</field>
+                <field name="municipio_codigo_ine">50101</field>
+                <field name="municipio_codigo_ine_anterior">50101</field>
+                <field name="municipio_codigo_economia_finanzas">1501</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">198</field>
+                <field name="municipio_nombre">Tinguipaya</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-65.8659414</field>
+                <field name="municipio_latitud">-19.1698905</field>
+                <field name="municipio_categoria">C</field>
+                <field name="municipio_codigo_ine">50102</field>
+                <field name="municipio_codigo_ine_anterior">50102</field>
+                <field name="municipio_codigo_economia_finanzas">1502</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">199</field>
+                <field name="municipio_nombre">Yocalla</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-65.9196123</field>
+                <field name="municipio_latitud">-19.4805892</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">50103</field>
+                <field name="municipio_codigo_ine_anterior">50103</field>
+                <field name="municipio_codigo_economia_finanzas">1503</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">200</field>
+                <field name="municipio_nombre">Urmiri</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-66.1734261</field>
+                <field name="municipio_latitud">-19.4655291</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">50104</field>
+                <field name="municipio_codigo_ine_anterior">50104</field>
+                <field name="municipio_codigo_economia_finanzas">1504</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">201</field>
+                <field name="municipio_nombre">Uncía</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-66.5404117</field>
+                <field name="municipio_latitud">-18.5691519</field>
+                <field name="municipio_categoria">C</field>
+                <field name="municipio_codigo_ine">50201</field>
+                <field name="municipio_codigo_ine_anterior">50201</field>
+                <field name="municipio_codigo_economia_finanzas">1505</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">202</field>
+                <field name="municipio_nombre">Chayanta</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-66.3593698</field>
+                <field name="municipio_latitud">-18.4120729</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">50202</field>
+                <field name="municipio_codigo_ine_anterior">50202</field>
+                <field name="municipio_codigo_economia_finanzas">1506</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">203</field>
+                <field name="municipio_nombre">Llallagua</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-66.5579902</field>
+                <field name="municipio_latitud">-18.3514317</field>
+                <field name="municipio_categoria">C</field>
+                <field name="municipio_codigo_ine">50203</field>
+                <field name="municipio_codigo_ine_anterior">50203</field>
+                <field name="municipio_codigo_economia_finanzas">1507</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">204</field>
+                <field name="municipio_nombre">Chuquihuta Ayllu Jucumani</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-66.3448516</field>
+                <field name="municipio_latitud">-18.6259831</field>
+                <field name="municipio_categoria">
+                </field>
+                <field name="municipio_codigo_ine">50204</field>
+                <field name="municipio_codigo_ine_anterior">50204</field>
+                <field name="municipio_codigo_economia_finanzas">1540</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">205</field>
+                <field name="municipio_nombre">Betanzos</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-65.2617521</field>
+                <field name="municipio_latitud">-19.4410855</field>
+                <field name="municipio_categoria">C</field>
+                <field name="municipio_codigo_ine">50301</field>
+                <field name="municipio_codigo_ine_anterior">50301</field>
+                <field name="municipio_codigo_economia_finanzas">1508</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">206</field>
+                <field name="municipio_nombre">Chaqui</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-65.5366906</field>
+                <field name="municipio_latitud">-19.6128697</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">50302</field>
+                <field name="municipio_codigo_ine_anterior">50302</field>
+                <field name="municipio_codigo_economia_finanzas">1509</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">207</field>
+                <field name="municipio_nombre">Tacobamba</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-65.5439156</field>
+                <field name="municipio_latitud">-19.1981602</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">50303</field>
+                <field name="municipio_codigo_ine_anterior">50303</field>
+                <field name="municipio_codigo_economia_finanzas">1510</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">208</field>
+                <field name="municipio_nombre">Colquechaca</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-66.055854</field>
+                <field name="municipio_latitud">-18.8830213</field>
+                <field name="municipio_categoria">C</field>
+                <field name="municipio_codigo_ine">50401</field>
+                <field name="municipio_codigo_ine_anterior">50401</field>
+                <field name="municipio_codigo_economia_finanzas">1511</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">209</field>
+                <field name="municipio_nombre">Ravelo</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-65.5539037</field>
+                <field name="municipio_latitud">-18.7503187</field>
+                <field name="municipio_categoria">C</field>
+                <field name="municipio_codigo_ine">50402</field>
+                <field name="municipio_codigo_ine_anterior">50402</field>
+                <field name="municipio_codigo_economia_finanzas">1512</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">210</field>
+                <field name="municipio_nombre">Pocoata</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-66.1485302</field>
+                <field name="municipio_latitud">-18.6271807</field>
+                <field name="municipio_categoria">C</field>
+                <field name="municipio_codigo_ine">50403</field>
+                <field name="municipio_codigo_ine_anterior">50403</field>
+                <field name="municipio_codigo_economia_finanzas">1513</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">211</field>
+                <field name="municipio_nombre">Ocurí</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-65.7926599</field>
+                <field name="municipio_latitud">-18.8312543</field>
+                <field name="municipio_categoria">C</field>
+                <field name="municipio_codigo_ine">50404</field>
+                <field name="municipio_codigo_ine_anterior">50404</field>
+                <field name="municipio_codigo_economia_finanzas">1514</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">212</field>
+                <field name="municipio_nombre">San Pedro</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-65.9965346</field>
+                <field name="municipio_latitud">-18.3035549</field>
+                <field name="municipio_categoria">C</field>
+                <field name="municipio_codigo_ine">50501</field>
+                <field name="municipio_codigo_ine_anterior">50501</field>
+                <field name="municipio_codigo_economia_finanzas">1515</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">213</field>
+                <field name="municipio_nombre">Toro Toro</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-65.7443458</field>
+                <field name="municipio_latitud">-18.1678513</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">50502</field>
+                <field name="municipio_codigo_ine_anterior">50502</field>
+                <field name="municipio_codigo_economia_finanzas">1516</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">214</field>
+                <field name="municipio_nombre">Cotagaita</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-65.7591181</field>
+                <field name="municipio_latitud">-20.7055406</field>
+                <field name="municipio_categoria">C</field>
+                <field name="municipio_codigo_ine">50601</field>
+                <field name="municipio_codigo_ine_anterior">50601</field>
+                <field name="municipio_codigo_economia_finanzas">1517</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">215</field>
+                <field name="municipio_nombre">Vitichi</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-65.4246831</field>
+                <field name="municipio_latitud">-20.3397038</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">50602</field>
+                <field name="municipio_codigo_ine_anterior">50602</field>
+                <field name="municipio_codigo_economia_finanzas">1518</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">216</field>
+                <field name="municipio_nombre">Tupiza</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-65.8660544</field>
+                <field name="municipio_latitud">-21.4934531</field>
+                <field name="municipio_categoria">C</field>
+                <field name="municipio_codigo_ine">50701</field>
+                <field name="municipio_codigo_ine_anterior">50801</field>
+                <field name="municipio_codigo_economia_finanzas">1519</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">217</field>
+                <field name="municipio_nombre">Atocha</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-66.1436668</field>
+                <field name="municipio_latitud">-21.0781708</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">50702</field>
+                <field name="municipio_codigo_ine_anterior">50802</field>
+                <field name="municipio_codigo_economia_finanzas">1520</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">218</field>
+                <field name="municipio_nombre">ColchaK (Villa Martin)</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-67.206547</field>
+                <field name="municipio_latitud">-21.0247474</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">50801</field>
+                <field name="municipio_codigo_ine_anterior">50901</field>
+                <field name="municipio_codigo_economia_finanzas">1521</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">219</field>
+                <field name="municipio_nombre">San Pedro de Quemes</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-68.1850101</field>
+                <field name="municipio_latitud">-20.9322304</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">50802</field>
+                <field name="municipio_codigo_ine_anterior">50902</field>
+                <field name="municipio_codigo_economia_finanzas">1522</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">220</field>
+                <field name="municipio_nombre">San Pablo de Lípez</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-67.3636632</field>
+                <field name="municipio_latitud">-22.2018654</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">50901</field>
+                <field name="municipio_codigo_ine_anterior">51001</field>
+                <field name="municipio_codigo_economia_finanzas">1523</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">221</field>
+                <field name="municipio_nombre">Mojinete</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-66.3323789</field>
+                <field name="municipio_latitud">-21.8121741</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">50902</field>
+                <field name="municipio_codigo_ine_anterior">51002</field>
+                <field name="municipio_codigo_economia_finanzas">1524</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">222</field>
+                <field name="municipio_nombre">San Antonio de Esmoruco</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-66.5585986</field>
+                <field name="municipio_latitud">-22.0565376</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">50903</field>
+                <field name="municipio_codigo_ine_anterior">51003</field>
+                <field name="municipio_codigo_economia_finanzas">1525</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">223</field>
+                <field name="municipio_nombre">Sacaca (Villa de Sacaca)</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-66.3350863</field>
+                <field name="municipio_latitud">-18.0834661</field>
+                <field name="municipio_categoria">C</field>
+                <field name="municipio_codigo_ine">51001</field>
+                <field name="municipio_codigo_ine_anterior">50701</field>
+                <field name="municipio_codigo_economia_finanzas">1526</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">224</field>
+                <field name="municipio_nombre">Caripuyo</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-66.5802937</field>
+                <field name="municipio_latitud">-18.1624747</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">51002</field>
+                <field name="municipio_codigo_ine_anterior">50702</field>
+                <field name="municipio_codigo_economia_finanzas">1527</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">225</field>
+                <field name="municipio_nombre">Puna (Villa Talavera)</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-65.3654149</field>
+                <field name="municipio_latitud">-19.830024</field>
+                <field name="municipio_categoria">C</field>
+                <field name="municipio_codigo_ine">51101</field>
+                <field name="municipio_codigo_ine_anterior">51101</field>
+                <field name="municipio_codigo_economia_finanzas">1528</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">226</field>
+                <field name="municipio_nombre">Caiza &#39;D&#39;</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-65.6538494</field>
+                <field name="municipio_latitud">-19.9765892</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">51102</field>
+                <field name="municipio_codigo_ine_anterior">51102</field>
+                <field name="municipio_codigo_economia_finanzas">1529</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">227</field>
+                <field name="municipio_nombre">Ckochas</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-65.0070088</field>
+                <field name="municipio_latitud">-19.7047173</field>
+                <field name="municipio_categoria">
+                </field>
+                <field name="municipio_codigo_ine">51103</field>
+                <field name="municipio_codigo_ine_anterior">51103</field>
+                <field name="municipio_codigo_economia_finanzas">1539</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">228</field>
+                <field name="municipio_nombre">Uyuni</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-66.9038944</field>
+                <field name="municipio_latitud">-20.1489487</field>
+                <field name="municipio_categoria">C</field>
+                <field name="municipio_codigo_ine">51201</field>
+                <field name="municipio_codigo_ine_anterior">51201</field>
+                <field name="municipio_codigo_economia_finanzas">1530</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">229</field>
+                <field name="municipio_nombre">Tomave</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-66.4461438</field>
+                <field name="municipio_latitud">-20.0074962</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">51202</field>
+                <field name="municipio_codigo_ine_anterior">51202</field>
+                <field name="municipio_codigo_economia_finanzas">1531</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">230</field>
+                <field name="municipio_nombre">Porco</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-66.0032152</field>
+                <field name="municipio_latitud">-19.7838947</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">51203</field>
+                <field name="municipio_codigo_ine_anterior">51203</field>
+                <field name="municipio_codigo_economia_finanzas">1532</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">231</field>
+                <field name="municipio_nombre">Arampampa</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-66.102148</field>
+                <field name="municipio_latitud">-17.9171286</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">51301</field>
+                <field name="municipio_codigo_ine_anterior">51301</field>
+                <field name="municipio_codigo_economia_finanzas">1533</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">232</field>
+                <field name="municipio_nombre">Acasio</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-66.0218668</field>
+                <field name="municipio_latitud">-18.0462461</field>
+                <field name="municipio_categoria">B</field>
+                <field name="municipio_codigo_ine">51302</field>
+                <field name="municipio_codigo_ine_anterior">51302</field>
+                <field name="municipio_codigo_economia_finanzas">1534</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">233</field>
+                <field name="municipio_nombre">Llica</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-68.3803339</field>
+                <field name="municipio_latitud">-19.9991004</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">51401</field>
+                <field name="municipio_codigo_ine_anterior">51401</field>
+                <field name="municipio_codigo_economia_finanzas">1535</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">234</field>
+                <field name="municipio_nombre">Tahua</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-67.9667176</field>
+                <field name="municipio_latitud">-20.5232869</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">51402</field>
+                <field name="municipio_codigo_ine_anterior">51402</field>
+                <field name="municipio_codigo_economia_finanzas">1536</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">235</field>
+                <field name="municipio_nombre">Villazón</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-21.9091511</field>
+                <field name="municipio_latitud">-65.6411057</field>
+                <field name="municipio_categoria">C</field>
+                <field name="municipio_codigo_ine">51501</field>
+                <field name="municipio_codigo_ine_anterior">51501</field>
+                <field name="municipio_codigo_economia_finanzas">1537</field>
+                <field name="municipio_estado">1</field>
+            </row>
+            
+            <row>
+                <field name="id">236</field>
+                <field name="municipio_nombre">San Agustín</field>
+                <field name="municipio_departamento">Potosí</field>
+                <field name="municipio_longitud">-66.5307496</field>
+                <field name="municipio_latitud">-21.9361966</field>
+                <field name="municipio_categoria">A</field>
+                <field name="municipio_codigo_ine">51601</field>
+                <field name="municipio_codigo_ine_anterior">51601</field>
+                <field name="municipio_codigo_economia_finanzas">1538</field>
+                <field name="municipio_estado">1</field>
+            </row>
+        </table_data>
+    </database>
+</mysqldump>
+

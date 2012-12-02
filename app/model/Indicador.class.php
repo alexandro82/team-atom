@@ -84,9 +84,35 @@ class Indicador extends DatabaseConnection
             $data = $this->getData();
             $stmt->execute($data);
         } catch (\Exception $e) {
-            $msg = "No Indicador::save:\n$e";
+            $msg = "Error Indicador::save:\n$e";
             error_log($e);
         }
+    }
+
+    public function getIndicadorByName($i = null)
+    {
+        $data = array();
+        try {
+            $indicador = null;
+            if (null === $i) {
+                $indicador = '%%';
+            } else {
+                $indicador = '%' . $i . '%';
+            }
+            $query = " SELECT * "
+                . " FROM indicador "
+                . " WHERE indicador_descripcion like :indicador "
+                . " ORDER BY indicador_descripcion ASC ";
+            $pdo = $this->getConnection();
+            $stmt = $pdo->prepare($query);
+            $stmt->bindValue(':indicador', $indicador);
+            $stmt->execute();
+            $data = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        } catch (\Exception $e) {
+            $msg = "Error Indicador::getIndicadorByName:\n$e";
+            error_log($msg);
+        }
+        return $data;
     }
 }
 
