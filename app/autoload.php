@@ -8,7 +8,9 @@ spl_autoload_register(
         if ($classes === null) {
             $classes = array(
                 'atom\\database\\databaseconnection' => '/dbconnection/DatabaseConnection.class.php',
-                'atom\\model\\municipio' => '/model/Municipio.class.php',
+                'atom\\model\\indicador' => '/model/Indicador.class.php',
+                'atom\\model\\indice' => '/model/Indice.class.php',
+                'atom\\model\\municipio' => '/model/Municipio.class.php'
             );
         }
         $cn = strtolower($class);

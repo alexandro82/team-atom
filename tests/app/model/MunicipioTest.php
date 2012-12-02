@@ -38,6 +38,7 @@ class MunicipioTest extends Generic_Tests_DatabaseTestCase
         $expected = $this->createMySQLXMLDataSet($fixture);
         $actual = new \PHPUnit_Extensions_Database_DataSet_QueryDataSet($this->getConnection());
         $actual->addTable('municipio');
+        
         $this->assertEquals(0, $this->getConnection()->getRowCount('municipio'));
     }
 
