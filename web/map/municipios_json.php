@@ -1,12 +1,8 @@
 <?php
 include_once("conectar.php");
 
-  
-
- 
 $sql= new BDD;
 $sql->Connect();
-
 
 //Creamos  el archivo json de temática
 // Se realiza una busqueda de los puntos en la base de datos
@@ -25,7 +21,7 @@ while ($fila = @mysql_fetch_assoc($resultado))
 {
 if ($aux == 0) {$a=""; $aux=1;} else $a=",";
 
-$color= "FF0000";
+$color= "e05b2f";
 $radio=10;
 $lon=$fila["municipio_longitud"];
 $lat=$fila["municipio_latitud"];
@@ -40,9 +36,7 @@ $json.=']';
 $json.='}';
 //Creamos  el archivo json de temática
 
-
 $sql->Disconnect();
-
 
 echo $json;
 ?>

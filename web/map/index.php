@@ -62,7 +62,7 @@ include_once("./conectar.php");
                     var municipios_style = new OpenLayers.Style({
                         'fillColor': '${color}',
 			'fillOpacity': .7,
-			'strokeColor': '#000000',
+			'strokeColor': '#ba4c27',
 			'strokeWidth': 1,
 			'pointRadius': '${radio}'
                     });	
