@@ -97,6 +97,7 @@ function init_lib() {
             if (canvas) {
                 graphic = canvas.graphics[0];
                 for (i = 0; i < 2; i += 1) {
+
                     for (v in data[i]) {
                         data[i][v].canvas = canvas;
                     }

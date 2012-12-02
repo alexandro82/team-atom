@@ -14,6 +14,7 @@ var DispersionGraphic = function (options) {
         this.xVariables = [];
     this.yVariables = [];
     this.points = [];
+    this.year = 2005;
     DispersionGraphic.prototype.initObject.call(this, options);
 };
 
@@ -41,6 +42,7 @@ DispersionGraphic.prototype.createVariable = function (options) {
 
 DispersionGraphic.prototype.initVariables = function (array, variables) {
     var i;
+    array = [];
     for (i = 0; i < variables.length; i += 1) {
         array.push(this.createVariable(variables[i]));
     }
@@ -111,10 +113,12 @@ DispersionGraphic.prototype.createHTML = function () {
     return this.html;
 };
 
-DispersionGraphic.prototype.loadPoints = function (xVariables, yVariables) {
+DispersionGraphic.prototype.loadPoints = function (xVariables, yVariables, dontInit) {
+    if (!dontInit) {
     this.initXVariables(xVariables)
-        .initYVariables(yVariables)
-        .setMiddlePoint()
+        .initYVariables(yVariables);
+    }
+        this.setMiddlePoint()
         .initPoints()
         .paint();
 };
@@ -128,6 +132,60 @@ DispersionGraphic.prototype.paint = function () {
     return this;
 };
 
+
+DispersionGraphic.prototype.compFunction = function (data1, data2) {
+    return data.municipio_id < data.municipio_id;
+};
+DispersionGraphic.prototype.setIndex = function (data,mun, catneeded, y) {
+    var i,
+        sum,
+        varData = [];
+    data.sort(this.compFunction);
+    if (catneeded) {
+        for (i in data) {
+            if (data[i].gestion === this.year && data[i].categoria === mun.category) {
+                if (y) {
+                    varData.push(data[i]);
+                    sum += data[i].valor;
+                } else {
+                    varData.push(data[i]);
+                    sum += data[i].valor;
+                }
+            }
+        }
+    }
+    else {
+
+        for (i in data) {
+            if (data[i].gestion === this.year) {
+                if (y) {
+                    varData.push(data[i]);
+                    sum += data[i].valor;
+                } else {
+                    varData.push(data[i]);
+                    sum += data[i].valor;
+                }
+            }
+        }
+    }
+
+    if (y) {
+        this.initYVariables(varData);
+        this.yVariables[0].criteria = sum / this.yVariables.length;
+    } else {
+        this.initXVariables(varData);
+        this.xVariables[0].criteria = sum / this.xVariables.length;
+
+    }
+};
+
 DispersionGraphic.prototype.setToTendency = function (municipality) {
-    alert(municipality.code);
+    var $mun = $(municipality.html);
+    $.post('dispesion/indice.php', "1",  function (data) {
+        this.setIndex(data, municipality);
+        $.post('dispesion/indice.php', "2",  function (data) {
+            this.setIndex(data, municipality, true);
+            this.loadPoints(this.xVariables, this.yVariables, false, true);
+        });
+    });
 };
