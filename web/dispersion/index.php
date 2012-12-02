@@ -1,3 +1,16 @@
+<?php
+require_once __DIR__.'/../../app/autoload.php';
+
+use atom\model\Indicador;
+use atom\model\Municipio;
+
+$indicador = new Indicador();
+$indicadores  = $indicador->getIndicadorByName('');
+$municipio = new Municipio();
+$municipios = $municipio->getMunicipiosByMunicipioName('');
+
+?>
+
 <!DOCTYPE html>
 <html lang="es" class="no-js">
 <head>
@@ -53,18 +66,63 @@ h4 {
     <div class="container-fluid">
         <div class="row-fluid">
             <?php include '/../leftbar.php'; ?>
-    
-            <div class="forms span3" style="position:relative;">
-                <div id="form_consulta" class="forms">
-                    <form  class="form">
-                        <label for="anio">A&ntilde;o:</label>
-                        <input name="anio" id="anio" />
-                    </form>
-                </div>
+
+            <div class="span3">
+                <form  class="form" style="width:100%">
+                    <label for="indicador_a">Indicador 1</label>
+                    <select name="indicador_a">
+                        <?php foreach($indicadores as $i): ?>
+                        <option value="<?php echo $i['id']; ?>">
+                            <?php echo $i['indicador_descripcion']; ?>
+                        </option>
+                        <?php endforeach; ?>
+                    </select>
+                    
+                    <label for="indicador_a">Indicador 2</label>
+                    <select name="indicador_a">
+                        <?php foreach($indicadores as $i): ?>
+                        <option value="<?php echo $i['id']; ?>">
+                            <?php echo $i['indicador_descripcion']; ?>
+                        </option>
+                        <?php endforeach; ?>
+                    </select>
+
+                    <label for="gestion">Gesti&oacute;n:</label>
+                    <select name="gestion">
+                        <?php foreach(range(2012, 2000) as $i): ?>
+                        <option value="<?php echo $i; ?>">
+                            <?php echo $i; ?>
+                        </option>
+                        <?php endforeach; ?>
+                    </select>
+                    
+                    <label for="municipio">Municipio:</label>
+                    <select name="municipio" id="municipio">
+                        <?php foreach($municipios as $m): ?>
+                        <option value="<?php echo $m['id']; ?>">
+                            <?php echo $m['nombre']; ?>
+                        </option>
+                        <?php endforeach; ?>
+                    </select>
+
+                    <br/>
+                    <br/>
+                    <input type="submit" class="btn" value="ver" />
+                </form>
+            </div>
+            
+            <div class="forms offset5" style="position:relative;">
                 <div id="canvas">
                 </div>
             </div>
         </div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         
         <hr>
         <footer>
