@@ -3,20 +3,30 @@ include_once("conectar.php");
 
 
 
-function busca_hijos($var)
+function busca_hijos($id,$nombre)
 {
 // Buscamos indices en la tabla indicador
-$consulta = "SELECT agrupador_hijo_id FROM agrupador WHERE agrupador_padre_id=".$var;
+$consulta = "SELECT a.agrupador_hijo_id,i.indicador_descripcion  FROM agrupador as a INNER JOIN indicador as i ON i.id=a.agrupador_hijo_id WHERE agrupador_padre_id=".$id;
 $resultado = mysql_query($consulta) or die("Error nodo_padre".mysql_error());  
+$aux=0;
 
-$lista=array();
+$var='{"name": "'.$nombre.'"';
+
+if (mysql_num_rows($resultado) > 0) 
+{
+    
+$var.=', "children": [';
 while ($fila= mysql_fetch_assoc($resultado))
     {
+    if ($aux == 0) {$a=""; $aux=1;} else $a=",";
     $agrupador_hijo_id=$fila["agrupador_hijo_id"];
-    $lista[]=$agrupador_hijo_id;
+    $indicador_descripcion=$fila["indicador_descripcion"];
+    $var.=$a.busca_hijos($agrupador_hijo_id,$indicador_descripcion);
     }
-    
-return $lista;
+$var.=']';
+}  
+$var.='}';
+return $var;
 }
 
 function tiene_padre($var)
@@ -42,62 +52,43 @@ function nodo_inicial()
      */
 $lista=array();
 // Buscamos indices en la tabla indicador
-$consulta = "SELECT DISTINCT agrupador_padre_id FROM agrupador";
+$consulta = "SELECT DISTINCT a.agrupador_padre_id,i.indicador_descripcion FROM agrupador as a INNER JOIN indicador as i ON i.id=a.agrupador_padre_id";
 $resultado = mysql_query($consulta) or die("Error nodo_inicial ".mysql_error());
 //Se recupera los datos de la base de datos fila por fila
 while ($fila= mysql_fetch_assoc($resultado))
     {
     $agrupador_padre_id=$fila["agrupador_padre_id"];
-    if (!tiene_padre($agrupador_padre_id)) $lista[]=$agrupador_padre_id;
+    $indicador_descripcion=$fila["indicador_descripcion"];
+    if (!tiene_padre($agrupador_padre_id)) 
+        {
+        $lista[]=array($agrupador_padre_id,$indicador_descripcion);
+        }
     }
 
 return $lista;
 
 }
 
-
-/*
 $json="";
 //Creamos el archivo json
 $json.="{";
 $json.='"name": "Indices",';
 $json.='"children": [';
-$aux1=0;
 
-// Buscamos indices en la tabla indicador
-$consulta_indice = "SELECT agrupador_padre_id FROM agrupador  ";
-$resultado_indice = mysql_query($consulta_indice) or die(mysql_error());
-//Se recupera los datos de la base de datos fila por fila
-while ($fila_indice = @mysql_fetch_assoc($resultado_indice))
-{
-if ($aux1 == 0) {$a=""; $aux1=1;} else $a=",";
 
-$indice_id=$fila_indice["id"];
-$indice_descripcion=$fila_indice["indicador_descripcion"];
-$json.=$a.'{"name":"'.$indice_descripcion.'","children": [';
-$aux1=0;
-// Buscamos subindices en la tabla indicador
-$consulta_indice = "SELECT i.id, i.indicador_descripcion,i.indicador_tipo FROM indicador as i 
-    INNER JOIN agrupador as a ON i.id=a.agrupador_hijo_id
- WHERE i.indicador_tipo='SUBINDICE' AND a.agrupador_hijo_id='$indice_id' ";
-$resultado_indice = mysql_query($consulta_indice) or die(mysql_error());
-//Se recupera los datos de la base de datos fila por fila
-} 
-
-$json.=']';
-$json.='}';
-//Creamos  el archivo json de temática
-*/
 $sql= new BDD;
 $sql->Connect();
 
+$aux=0;
+
 foreach (nodo_inicial() as $nodo) {
- $nodos_hijos=busca_hijos($nodo);
- if (count($nodos_hijos) > 0) 
-     foreach ($nodos_hijos as $nodo_hijo) {
-         echo $nodo."-".$nodo_hijo."<br />";
-     }   
+    if ($aux == 0) {$a=""; $aux=1;} else $a=",";
+ $nodos_hijos=busca_hijos($nodo[0],$nodo[1]);
+  $json.=$a.$nodos_hijos;
 };
-$sql->Disconnect();    
-//echo $json;
+$sql->Disconnect(); 
+
+$json.=']';
+$json.='}';
+echo $json;
 ?>
