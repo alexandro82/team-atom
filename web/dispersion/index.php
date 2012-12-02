@@ -173,7 +173,7 @@ h4 {
     <script type="text/javascript">
         
         $(document).ready(function() {
-            $("#consulta_indice").on('click', function(event){
+            $("#consulta_indice").on('submit', function(event){
                 event.preventDefault();
                 var indicador_a = $(this).find('#indicador_a option:selected').val();
                 var indicador_b = $(this).find('#indicador_b option:selected').val();

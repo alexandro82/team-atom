@@ -42,6 +42,7 @@ Graphic.prototype.createAxis = function (options) {
 
 Graphic.prototype.addElement = function (element, x, y) {
     element.setPosition(x, y);
+    console.log(x + " " + y);
     this.html.appendChild(element.getHTML());
     element.attachListeners();
     this.elements.push(element);

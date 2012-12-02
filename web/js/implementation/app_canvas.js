@@ -57,7 +57,7 @@ AppCanvas.prototype.getMunicipality = function (id) {
     var i,
         municipality = null;
     for (i = 0; i < this.municipalities.length; i += 1) {
-        if (this.municipalities[i].id === id) {
+        if (this.municipalities[i].id == id) {
             municipality = this.municipalities[i];
             break;
         }

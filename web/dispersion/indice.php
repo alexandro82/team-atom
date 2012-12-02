@@ -9,7 +9,7 @@ header('Content-Type: application/json; charset=utf8');
 $response = array();
 try {
     $indice = new Indice();
-    $response = $indice->getIndiceByIndicador('1');
+    $response = $indice->getIndiceByIndicador($_POST['index']);
 } catch (\Exception $e) {
     error_log("Error dispersion/municipios.php\n$e");
     $response['result'] = 'error';

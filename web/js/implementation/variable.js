@@ -21,7 +21,7 @@ Variable.prototype.criteria = .5;
 Variable.prototype.initObject = function (options) {
     var defaults = {
         valor : 0,
-        año : 2012,
+        gestion : 2012,
         "municipio_id" : "",
         canvas : null
     };
@@ -30,7 +30,7 @@ Variable.prototype.initObject = function (options) {
 
         this.setCanvas(defaults.canvas)
         .setValue(defaults.valor)
-        .setYear(defaults.año)
+        .setYear(defaults.gestion)
         .setMunicipality(defaults.municipio_id)
 };
 Variable.prototype.setMunicipality = function (id) {
@@ -41,7 +41,8 @@ Variable.prototype.setMunicipality = function (id) {
     return this;
 };
 Variable.prototype.setValue = function (value) {
-    this.value = value;
+    value = ""+value;
+    this.value = parseFloat(value);
     return this;
 };
 

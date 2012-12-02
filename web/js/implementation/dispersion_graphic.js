@@ -38,13 +38,14 @@ DispersionGraphic.prototype.initObject = function (options) {
 };
 
 DispersionGraphic.prototype.createVariable = function (options) {
+    options.canvas = this.canvas;
     var variable = new Variable(options);
     return variable;
 };
 
 DispersionGraphic.prototype.initVariables = function (array, variables) {
     var i;
-    array = [];
+
     for (i = 0; i < variables.length; i += 1) {
         array.push(this.createVariable(variables[i]));
     }
@@ -52,10 +53,12 @@ DispersionGraphic.prototype.initVariables = function (array, variables) {
 };
 
 DispersionGraphic.prototype.initXVariables = function (variables) {
+    this.xVariables = [];
     this.initVariables(this.xVariables, variables);
     return this;
 };
 DispersionGraphic.prototype.initYVariables = function (variables) {
+    this.yVariables = [];
     this.initVariables(this.yVariables, variables);
     return this;
 };
@@ -90,21 +93,40 @@ DispersionGraphic.prototype.setMiddlePoint = function () {
 };
 
 DispersionGraphic.prototype.initPoints = function () {
-    var i;
-    this.points = [];
-    for (i = 0; i < this.xVariables.length && i < this.yVariables.length; i += 1) {
-        this.addPoint(this.xVariables[i], this.yVariables[i]);
+    var i, j;
+
+
+    for (i = 0; i < this.points.length; i += 1) {
+        this.html.removeChild(this.points[i].html);
     }
+
+    this.points = [];
+    this.elements = [];
+
+    for (i = 0;  i < this.xVariables.length; i += 1) {
+        for (j = 0; j < this.yVariables.length; j += 1) {
+
+            if (this.xVariables[i].getMunicipality().id == this.yVariables[j].getMunicipality().id) {
+
+                this.addPoint(this.xVariables[i], this.yVariables[j]);
+            }
+        }
+    }
+    //console.log(this.points.length);
+
     return this;
 };
 DispersionGraphic.prototype.addPoint = function (xVar, yVar) {
     var municipality = xVar.getMunicipality(),
-        x = this.xAxis.getValPosition(xVar.value) * this.xAxis.factor + this.xAxis.x,
-        y = this.yAxis.getValPosition(yVar.value) * this.yAxis.factor + this.yAxis.y;
+
+        posx = this.xAxis.getValPosition(xVar.value),
+        posy = this.yAxis.getValPosition(yVar.value);
+        var xv =  posx * this.xAxis.factor + this.xAxis.labels[posx] - xVar.value + this.xAxis.x,
+        yv =  posy * this.yAxis.factor + yVar.value - this.yAxis.labels[posy] + this.yAxis.y;
 
 
     this.points.push(municipality);
-    this.addElement(municipality, x, y);
+    this.addElement(municipality, xv, yv);
     return this;
 };
 
@@ -136,47 +158,44 @@ DispersionGraphic.prototype.paint = function () {
 
 
 DispersionGraphic.prototype.compFunction = function (data1, data2) {
-    return data.municipio_id < data.municipio_id;
+    return data1.municipio_id < data2.municipio_id;
 };
 DispersionGraphic.prototype.setIndex = function (data,mun, catneeded, y) {
     var i,
-        sum,
+        sum = 0,
         varData = [];
-    data.sort(this.compFunction);
+
     if (catneeded) {
-        for (i in data) {
-            if (data[i].gestion === this.year && data[i].categoria === mun.category) {
-                if (y) {
+        for (i = 0; i < data.length; i += 1) {
+            if (data[i].gestion == this.year && data[i].categoria == mun.category) {
+
                     varData.push(data[i]);
-                    sum += data[i].valor;
-                } else {
-                    varData.push(data[i]);
-                    sum += data[i].valor;
-                }
+                    sum += parseFloat(data[i].valor);
+
             }
         }
     }
     else {
 
-        for (i in data) {
-            if (data[i].gestion === this.year) {
-                if (y) {
+        for (i = 0; i < data.length; i += 1) {
+            if (data[i].gestion == this.year) {
+
                     varData.push(data[i]);
-                    sum += data[i].valor;
-                } else {
-                    varData.push(data[i]);
-                    sum += data[i].valor;
-                }
+                    sum +=  parseFloat(data[i].valor);
+
             }
         }
     }
 
     if (y) {
+
         this.initYVariables(varData);
-        this.yVariables[0].criteria = sum / this.yVariables.length;
+        this.yVariables[0].criteria = (sum / varData.length)/100;
+
     } else {
+
         this.initXVariables(varData);
-        this.xVariables[0].criteria = sum / this.xVariables.length;
+        this.xVariables[0].criteria = (sum / varData.length)/100;
 
     }
 };
@@ -186,6 +205,10 @@ DispersionGraphic.prototype.setParameters = function (index1, index2, year, muni
     var catneed1 = false,
         catneed2 = false,
         municipality = this.canvas.getMunicipality(municip);
+    if (!municipality) {
+        return;
+    }
+    municipality.setSelected(true);
     if (index1 == "1" || index1 == "2" || index1 == "31") {
         catneed1 = true;
     }
@@ -197,11 +220,15 @@ DispersionGraphic.prototype.setParameters = function (index1, index2, year, muni
         return;
     }
 
-    $.post('dispesion/indice.php',""+index1 ,  function (data) {
-        this.setIndex(data, municipality,catneed1);
-        $.post('dispesion/indice.php', ""+index2,  function (data) {
-            this.setIndex(data, municipality, catneed2, true);
-            this.loadPoints(this.xVariables, this.yVariables, true);
-        });
+    var that = this;
+
+    $.post('/dispersion/indice.php',{'index':index1} ,  function (data) {
+
+        that.setIndex(data, municipality,catneed1);
+
+    });
+    $.post('/dispersion/indice.php', {'index':index2},  function (data) {
+        that.setIndex(data, municipality, catneed2, true);
+        that.loadPoints(this.xVariables, this.yVariables, true);
     });
 };

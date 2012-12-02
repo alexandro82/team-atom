@@ -45,7 +45,7 @@ GenericObject.prototype.getHTMLDiv = function () {
     return document.createElement("div");
 };
 GenericObject.prototype.createHTML = function () {
-    if (!this.html) {
+
         this.html = this.getHTMLDiv();
         this.html.id = this.id;
         this.html.style.position = "absolute";
@@ -55,7 +55,7 @@ GenericObject.prototype.createHTML = function () {
         this.html.style.height = this.height + "px";
 
 
-    }
+
     return this.html;
 };
 
